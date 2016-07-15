@@ -1,0 +1,19 @@
+---
+title: "GerminaQuant App"
+author: "Flavio Lozano Isla, Omar Benites Alfaro, Marcelo Francisco Pompelli"
+date: "`r Sys.Date()`"
+output: bookdown::gitbook
+site: bookdown::bookdown_site
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+```{r, out.width = 400, fig.retina = NULL}
+knitr::include_graphics("img/germinaquant.pgn")
+```
+
+![]("img/germinaquant.pgn")
+

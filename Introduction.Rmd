@@ -1,0 +1,5 @@
+# Introduction
+
+GerminaQuant App allows make the calculation for the germination variables incredibly easy in a interactive applications build in R, based in GerminaR and Shiny packages. GerminaQuant app is reactive!. Outputs change instantly as users modify inputs, without requiring a reload the app.
+
+The principal features of the application allow calculate the principal germination variables, statistical analysis and easy way to plot the results.

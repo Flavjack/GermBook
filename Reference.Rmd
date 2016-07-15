@@ -1,0 +1,12 @@
+# References
+
+CARVALHO, M.; SANTANA, D. Emergencia de plantulas de Anacardium humile A. St.Hil.(Anacardiaceae) avaliada por meio de amostras pequenas. Revista Brasileira de, 2005.
+CZABATOR, F. J. Germination value: an index combining speed and completeness of pine seed germination. Forest Science, v. 8, n. 4, p. 386-396, 1962.
+FERREIRA MARQUES, F. R. et al. GerminaQuant : a new tool for germination measurements. Journal of Seed Science, p. 1-8, 2015.
+LABOURIAU, L. L. G. L. A germinacao das sementes. Washington: [s.n.].
+JOOSEN, R. V. L. et al. germinator: a software package for high-throughput scoring and curve fitting of Arabidopsis seed germination. The Plant Journal, v. 62, n. 1, p. 148-159, 22. abr. 2010.
+LABOURIAU, L. G.; VALADARES, M. E. B. The germination of seeds. OEA, Washington, DC, 1983.
+MARCOS-FILHO, J. New approaches to seed vigor testing. Scientia Agricola, v. 55, n. spe, p. 27-33, 1998.
+PENFIELD, S.; KING, J. Towards a systems biology approach to understanding seed dormancy and germination. Proceedings. Biological sciences / The Royal Society, v. 276, n. 1673, p. 3561-9, 22 out. 2009.
+RANAL, M. A. et al. Calculating germination measurements and organizing spreadsheets. Revista Brasileira de Botanica, v. 32, n. 4, p. 849-855, 2009.
+RANAL, M. A.; SANTANA, D. G. DE. How and why to measure the germination process? Revista Brasileira de Botanica, v. 29, n. 1, p. 1-11, mar. 2006.
