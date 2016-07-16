@@ -1,18 +1,17 @@
-book_filename: "GerminaQuant.Rmd"
-edit:
-  link: https://github.com/Flavjack/GermBook/%s
-  text: "Edit"
-output_dir: "book-output"
-clean: ["GerminaQuant.bbl", "R-packages.bib"]
+book_filename: bookdown
+repo: https://github.com/Flavjack/GermBook
+output_dir: _book
+clean: [packages.bib, bookdown.bbl]
+
 
 rmd_files: [
             "index.Rmd",
-            "Introduction.Rmd",
             "Germination.Rmd",
             "Gindex.Rmd",
             "Fieldbook.Rmd",
             "Ganalysis.Rmd",
             "DataProcessing.Rmd",
+            "demo.Rmd",
             "Reference.Rmd"
             ]
             

@@ -2,4 +2,15 @@
 
 After fish the data collection of the germination process these information can be processed using GerminaQuant App. The web application can be used in any device connected to the internet in an interactive way. The application is compound in tabs (Table 02) that allow to made the analysis very easy. 
 
+```{r, echo=FALSE}
+knitr::include_graphics("img/tabs.png")
+```
+
 Table 02 Name and description of each tab of GerminaQuant App for evaluate and analyze the  germination process.
+
+```{r}
+
+knitr::include_app("https://flavjack.shinyapps.io/germinaquant/", height = "600px")
+
+```
+

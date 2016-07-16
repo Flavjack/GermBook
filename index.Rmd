@@ -1,19 +1,36 @@
----
+--- 
 title: "GerminaQuant App"
 author: "Flavio Lozano Isla, Omar Benites Alfaro, Marcelo Francisco Pompelli"
 date: "`r Sys.Date()`"
-output: bookdown::gitbook
+knit: "bookdown::render_book"
+documentclass: book
+bibliography: [book.bib, packages.bib]
+biblio-style: apalike
+link-citations: yes
 site: bookdown::bookdown_site
+description: "A guide for analisis of germination variables and usage of GerminaQuant web App."
+github-repo: Flavjack/GermBook
+cover-image: img/germinaquant.png
 ---
 
+
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+options(htmltools.dir.version = FALSE, formatR.indent = 2)
+lapply(c('DT'), function(pkg) {
+  if (!requireNamespace(pkg)) install.packages(pkg)
+})
+if (packageVersion('DT') < '0.1.45') devtools::install_github('rstudio/DT')
 ```
 
 
-```{r, out.width = 400, fig.retina = NULL}
-knitr::include_graphics("img/germinaquant.pgn")
+# Introduction {-}
+
+```{r fig.align='center', echo=FALSE, include=identical(knitr:::pandoc_to(), 'html')}
+knitr::include_graphics('img/germinaquant.png')
 ```
 
-![]("img/germinaquant.pgn")
+**GerminaQuant** App allows make the calculation for the germination variables incredibly easy in a interactive applications build in R [@R-base], based in GerminaR and Shiny [@R-shiny] package. GerminaQuant app is reactive!. Outputs change instantly as users modify inputs, without requiring a reload the app.
+
+The principal features of the application allow calculate the principal germination variables, statistical analysis and easy way to plot the results.
+
 
