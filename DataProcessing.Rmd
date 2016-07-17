@@ -10,32 +10,32 @@ If you have a google account you can clone the document for you and edit it onli
 
 ## Import Data
 
-When you have your field book, you can go [GerminaQuant](https://flavjack.shinyapps.io/germinaquant/) and go "Data Import" tab.
+When you have your field book, you can go [GerminaQuant](https://flavjack.shinyapps.io/germinaquant/) and go "Data Import" tab. Figure \@ref(fig:impdt).
 
-```{r fig.align='center', echo=FALSE, include=identical(knitr:::pandoc_to(), 'html')}
+```{r impdt, out.width='100%', fig.cap= "Data Import", fig.align='center', echo=FALSE, include=identical(knitr:::pandoc_to(), 'html')}
 knitr::include_graphics('img/impdt.png')
 ```
 
 Choose the file in "csv" format will be analysed. There are two case that will have default values if you use the . "Column with seeds number" you have to write the name of the column containing the information of the number of seed sown in each experimental unit , "Prefix of evaluation days" you have to put the prefix of the name called for the day for evaluate the germination time lapse. 
 
-```{r fig.align='center', echo=FALSE, include=identical(knitr:::pandoc_to(), 'html')}
+```{r csv, out.width='100%', fig.cap='Table option for csv format',fig.align='center', echo=FALSE, include=identical(knitr:::pandoc_to(), 'html')}
 knitr::include_graphics('img/csv.png')
 ```
 
-Below of the parameter for evaluation, you will find the option to select the parameter for the "csv" format file, in such way the file  should have a table form.
+Below of the parameter for evaluation, you will find the option to select the parameter for the "csv" format file, in such way the file  should have a table form. Figure \@ref(fig:csv)
 
 
 ## Germination analysis
 
-If the parameter in the "Import Data" tab are correct, in "Germination analysis" tab will be appear the values of the eleven germination variables for each experimental unit.
+If the parameter in the "Import Data" tab are correct, in "Germination analysis" tab will be appear the values of the eleven germination variables for each experimental unit. Figure \@ref(fig:var)
 
-```{r fig.align='center', echo=FALSE, include=identical(knitr:::pandoc_to(), 'html')}
+```{r var, out.width='70%', fig.cap='Variables calculated with GerminaQuant',fig.align='center', echo=FALSE, include=identical(knitr:::pandoc_to(), 'html')}
 knitr::include_graphics('img/var.png')
 ```
 
-GerminaQuant app allow to download the file in "csv" format with the calculation of the germination variables.
+GerminaQuant app allow to download the file in "csv" format with the calculation of the germination variables. Figure \@ref(fig:dwl)
 
-```{r fig.align='center', echo=FALSE, include=identical(knitr:::pandoc_to(), 'html')}
+```{r dwl, out.width='100%',fig.cap='Dowload option for the calculated variables'  ,fig.align='center', echo=FALSE, include=identical(knitr:::pandoc_to(), 'html')}
 knitr::include_graphics('img/dtdown.png')
 ```
 
@@ -43,7 +43,7 @@ knitr::include_graphics('img/dtdown.png')
 
 In this tab, the app perform a unifactor variance analysis, calculate the statistical description of the factor, the mean differences through three mean test: Tukey, Student Newman Keuls and Duncan and made the graphic for the chosen variable.
 
-```{r fig.align='center', echo=FALSE, include=identical(knitr:::pandoc_to(), 'html')}
+```{r stat, out.width='100%', fig.cap="Statitical analysis with ANOVA and mean comparison test", fig.align='center', echo=FALSE, include=identical(knitr:::pandoc_to(), 'html')}
 knitr::include_graphics('img/stat.png')
 ```
 
@@ -51,9 +51,9 @@ Remember, the independiente variables will be the factor in your field book and 
 
 ## Germination in Time
 
-This Tab allows to visualise the germination process for each factor included in the field book.
+This Tab allows to visualise the germination process for each factor included in the field book. Figure \@ref(fig:gtime)
 
-```{r fig.align='center', echo=FALSE, include=identical(knitr:::pandoc_to(), 'html')}
+```{r gtime, out.width='100%', fig.cap='Germination in time plot', fig.align='center', echo=FALSE, include=identical(knitr:::pandoc_to(), 'html')}
 knitr::include_graphics('img/gtime.png')
 ```
 
@@ -61,9 +61,9 @@ The app give two graphics, the first is the germination in percentage in time la
 
 ## Box Plot
 
-This section allows to plot the distribution of the germination observation through the box plot (outliers values and overlapping values) and allows to put label in the graph. In the section "Graphics variables", "Axis X" and "Grouped" you should choose between the factor in the the field book, are recommended in the "Axis X" you should choose the factor with more level and "Grouped" the factor with less levels, and the "Axis Y" any of the eleven germination variables, in the case you have only one factor  "Axis X" and "Grouped" should have the same factor. The axis label can be edited manually filling the case in the "Graphics labels" section.
+This section allows to plot the distribution of the germination observation through the box plot (outliers values and overlapping values) and allows to put label in the graph (Figure \@ref(fig:bplot)). In the section "Graphics variables", "Axis X" and "Grouped" you should choose between the factor in the the field book, are recommended in the "Axis X" you should choose the factor with more level and "Grouped" the factor with less levels, and the "Axis Y" any of the eleven germination variables, in the case you have only one factor  "Axis X" and "Grouped" should have the same factor. The axis label can be edited manually filling the case in the "Graphics labels" section.
 
-```{r fig.align='center', echo=FALSE, include=identical(knitr:::pandoc_to(), 'html')}
+```{r bplot, out.width='100%', fig.cap='Detection of outlier and overlapping values with box plot graphic',fig.align='center', echo=FALSE, include=identical(knitr:::pandoc_to(), 'html')}
 knitr::include_graphics('img/bplot.png')
 ```
 

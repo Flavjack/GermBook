@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>GerminaQuant App</title>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+  <meta name="description" content="A guide for analisis of germination variables and usage of GerminaQuant web App.">
+  <meta name="generator" content="bookdown 0.1.1 and GitBook 2.6.7">
+
+  <meta property="og:title" content="GerminaQuant App" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:image" content="img/germinaquant.png" />
+  <meta property="og:description" content="A guide for analisis of germination variables and usage of GerminaQuant web App." />
+  <meta name="github-repo" content="Flavjack/GermBook" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="GerminaQuant App" />
+  
+  <meta name="twitter:description" content="A guide for analisis of germination variables and usage of GerminaQuant web App." />
+  <meta name="twitter:image" content="img/germinaquant.png" />
+
+<meta name="author" content="Flavio Lozano Isla, Omar Benites Alfaro, Marcelo Francisco Pompelli">
+
+<meta name="date" content="2016-07-17">
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  TeX: { equationNumbers: { autoNumber: "AMS" } }
+});
+</script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="seed-germination-process.html">
+<link rel="next" href="germination-field-book.html">
+
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body>
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./"> GerminaQuant:User Manual</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Introduction</a></li>
+<li class="chapter" data-level="1" data-path="seed-germination-process.html"><a href="seed-germination-process.html"><i class="fa fa-check"></i><b>1</b> Seed germination process</a></li>
+<li class="chapter" data-level="2" data-path="germination-variables.html"><a href="germination-variables.html"><i class="fa fa-check"></i><b>2</b> Germination variables</a><ul>
+<li class="chapter" data-level="2.1" data-path="germination-variables.html"><a href="germination-variables.html#germination-g"><i class="fa fa-check"></i><b>2.1</b> Germination (g)</a></li>
+<li class="chapter" data-level="2.2" data-path="germination-variables.html"><a href="germination-variables.html#mean-germination-time-t"><i class="fa fa-check"></i><b>2.2</b> Mean Germination Time (t)</a></li>
+<li class="chapter" data-level="2.3" data-path="germination-variables.html"><a href="germination-variables.html#mean-germination-rate-v"><i class="fa fa-check"></i><b>2.3</b> Mean Germination Rate (v)</a></li>
+<li class="chapter" data-level="2.4" data-path="germination-variables.html"><a href="germination-variables.html#uncertainty-index-u"><i class="fa fa-check"></i><b>2.4</b> Uncertainty Index (U)</a></li>
+<li class="chapter" data-level="2.5" data-path="germination-variables.html"><a href="germination-variables.html#synchrony-index-z"><i class="fa fa-check"></i><b>2.5</b> Synchrony Index (Z)</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="germination-field-book.html"><a href="germination-field-book.html"><i class="fa fa-check"></i><b>3</b> Germination Field book</a><ul>
+<li class="chapter" data-level="3.1" data-path="germination-field-book.html"><a href="germination-field-book.html#data-organization"><i class="fa fa-check"></i><b>3.1</b> Data Organization</a></li>
+<li class="chapter" data-level="3.2" data-path="germination-field-book.html"><a href="germination-field-book.html#data-collection"><i class="fa fa-check"></i><b>3.2</b> Data Collection</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="germination-analysis.html"><a href="germination-analysis.html"><i class="fa fa-check"></i><b>4</b> Germination analysis</a><ul>
+<li class="chapter" data-level="4.1" data-path="germination-analysis.html"><a href="germination-analysis.html#germinaquant-web-application"><i class="fa fa-check"></i><b>4.1</b> GerminaQuant Web Application</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="germinaquant-data-processing.html"><a href="germinaquant-data-processing.html"><i class="fa fa-check"></i><b>5</b> GerminaQuant data processing</a><ul>
+<li class="chapter" data-level="5.1" data-path="germinaquant-data-processing.html"><a href="germinaquant-data-processing.html#field-book"><i class="fa fa-check"></i><b>5.1</b> Field Book</a></li>
+<li class="chapter" data-level="5.2" data-path="germinaquant-data-processing.html"><a href="germinaquant-data-processing.html#import-data"><i class="fa fa-check"></i><b>5.2</b> Import Data</a></li>
+<li class="chapter" data-level="5.3" data-path="germinaquant-data-processing.html"><a href="germinaquant-data-processing.html#germination-analysis-1"><i class="fa fa-check"></i><b>5.3</b> Germination analysis</a></li>
+<li class="chapter" data-level="5.4" data-path="germinaquant-data-processing.html"><a href="germinaquant-data-processing.html#statistical-analysis"><i class="fa fa-check"></i><b>5.4</b> Statistical analysis</a></li>
+<li class="chapter" data-level="5.5" data-path="germinaquant-data-processing.html"><a href="germinaquant-data-processing.html#germination-in-time"><i class="fa fa-check"></i><b>5.5</b> Germination in Time</a></li>
+<li class="chapter" data-level="5.6" data-path="germinaquant-data-processing.html"><a href="germinaquant-data-processing.html#box-plot"><i class="fa fa-check"></i><b>5.6</b> Box Plot</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="demostrative-video.html"><a href="demostrative-video.html"><i class="fa fa-check"></i><b>6</b> Demostrative Video</a></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://flavjack.shinyapps.io/germinaquant/" target="blank"> GerminaQuant </a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">GerminaQuant App</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="germination-variables" class="section level1">
+<h1><span class="header-section-number">2</span> Germination variables</h1>
+<div id="germination-g" class="section level2">
+<h2><span class="header-section-number">2.1</span> Germination (g)</h2>
+<p>According <span class="citation">Gouvêa Labouriau (<a href="#ref-GouveaLabouriau1983">1983</a>)</span>, the germinability of a sample of is the percentage of seeds in which the seed germination process comes to the end, in experimental conditions by the seminal intrauterine growth resulting protrusion (or emergence) of a living embryo. In general, it is presented as percentage, accompanied by some degree of dispersion, but it is possible to use proportions to one or more samples may be subjected to statistical tests <span class="citation">(Carvalho and Santana <a href="#ref-CARVALHO2005">2005</a>)</span>.</p>
+<p><span class="math display">\[ g=\left(\frac{\sum_{i=1}^kn_1}{N}\right)100 \]</span></p>
+<p><strong>Where:</strong> n<sub>i</sub>: number of germinated seed in the i<sup>th</sup> time; N: total number of seed in each experimental unit.</p>
+</div>
+<div id="mean-germination-time-t" class="section level2">
+<h2><span class="header-section-number">2.2</span> Mean Germination Time (t)</h2>
+<p>It was proposed by Haberlandt in 1875. It is calculated as the weighted average germination time. The number of germinated seeds at the intervals established for the collection of data is used as weight. It is expressed in terms of the same units of time used in the germination count <span class="citation">(Czabator <a href="#ref-Czabator1962">1962</a>)</span>.</p>
+<p><span class="math display">\[ t=\frac{\sum_{i=1}^kn_it_i}{\sum_{i=1}^kn_i} \]</span></p>
+<p><strong>Where</strong> t<sub>i</sub>: Time of start of experiment tempo to observation (days or hours); n<sub>i</sub>:number of seed germinated the i<sup>th</sup> time (number corresponding to i<sup>th</sup> observation); k:the last day of germination.</p>
+</div>
+<div id="mean-germination-rate-v" class="section level2">
+<h2><span class="header-section-number">2.3</span> Mean Germination Rate (v)</h2>
+<p>The average speed of germination is defined as the reciprocal of the average time germination <span class="citation">(Ranal and Santana <a href="#ref-Ranal2006">2006</a>)</span>.</p>
+<p><span class="math display">\[ v\ =\frac{1}{i} \]</span></p>
+<p><strong>Where</strong> t: mean germination time</p>
+</div>
+<div id="uncertainty-index-u" class="section level2">
+<h2><span class="header-section-number">2.4</span> Uncertainty Index (U)</h2>
+<p>The uncertainty index (U) is an adaptation of Shannon index measures the degree of uncertainty in predicting the informational entropy or uncertainty associated with the distribution of the relative frequency of germination <span class="citation">(Gouvêa Labouriau <a href="#ref-GouveaLabouriau1983">1983</a>; Labouriau and Valadares <a href="#ref-Labouriau1983">1983</a>)</span>. Low values of U indicate frequencies with short peaks, i.e. the more concentrated the germination in time. Just a germinated seed changes the value of U. This means that u measures the degree of germination scattering.</p>
+<p><span class="math display">\[ -\sum_{i=1}^kf_i\log_2f_i\ \ \Leftrightarrow\ \ \ f_i=\frac{n_i}{\sum_{i=1}^kn_i}  \]</span></p>
+<p><strong>Where</strong> f<sub>i</sub>: relative frequency of germination; n<sub>i</sub>:number of seed germinated in the time i number corresponding to i<sup>th</sup> observation); k:the last day of germination.</p>
+</div>
+<div id="synchrony-index-z" class="section level2">
+<h2><span class="header-section-number">2.5</span> Synchrony Index (Z)</h2>
+<p>The Synchrony Index (Z) has been proposed to assess the degree of overlap between flowering individuals in a population. Adopting the idea expressed by PRIMACK (1980), Synchrony index is the synchrony of germination of one seed with other included in the same replication. When synchrony index = 1, germination of all the seeds occurs at the same time and when synchrony index = 0, at least two seeds can germinate one each time. Synchrony index produces a number if and only if there are two seeds finishing the seed germination process at the same time. Thus, the value of Z assessments is the grade of overlap between seed germination.</p>
+<p><span class="math display">\[Z=\frac{\sum_{ }^{ }C_{n_1,2}}{N}\ \ \Leftrightarrow\ \ C_{n_1,2}=\frac{n_i\left(n_i-1\right)}{2}\ \ \Leftrightarrow\ \ N=\frac{\sum_{ }^{ }n_i\left(\sum_{ }^{ }n_i-1\right)}{2}\]</span></p>
+<p><strong>Where</strong> C<sub>n1</sub>,2: combination of germinated seeds in i<sup>th</sup> time; n<sub>i</sub>:number of germinated seed in the time i.</p>
+<div class="figure" style="text-align: center"><span id="fig:varsum"></span>
+<img src="img/varsum.png" alt="Limits of the each germination variable; n: number of total seed in germination condition." width="70%" />
+<p class="caption">
+Figure 2.1: Limits of the each germination variable; n: number of total seed in germination condition.
+</p>
+</div>
+
+</div>
+</div>
+<h3>References</h3>
+<div id="refs" class="references">
+<div id="ref-GouveaLabouriau1983">
+<p>Gouvêa Labouriau, Luiz. Luiz Gouvêa Labouriau. 1983. <em>A germinacâo das sementes</em>. Washington.</p>
+</div>
+<div id="ref-CARVALHO2005">
+<p>Carvalho, MP, and DG Santana. 2005. “Emergência de plântulas de Anacardium humile A. St.-Hil.(Anacardiaceae) avaliada por meio de amostras pequenas.” <em>Revista Brasileira de</em>. <a href="http://www.scielo.br/pdf/{\%}0D/rbb/v28n3/29011.pdf" class="uri">http://www.scielo.br/pdf/{\%}0D/rbb/v28n3/29011.pdf</a>.</p>
+</div>
+<div id="ref-Czabator1962">
+<p>Czabator, Felix J. 1962. “Germination value: an index combining speed and completeness of pine seed germination.” <em>Forest Science</em> 8 (4). Society of American Foresters: 386–96.</p>
+</div>
+<div id="ref-Ranal2006">
+<p>Ranal, Marli A., and Denise Garcia de Santana. 2006. “How and why to measure the germination process?” <em>Revista Brasileira de Botânica</em> 29 (1). Sociedade Botânica de São Paulo: 1–11. doi:<a href="https://doi.org/10.1590/S0100-84042006000100002">10.1590/S0100-84042006000100002</a>.</p>
+</div>
+<div id="ref-Labouriau1983">
+<p>Labouriau, L G, and M E B Valadares. 1983. “The germination of seeds.” <em>OEA, Washington, DC</em>.</p>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="seed-germination-process.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="germination-field-book.html" class="navigation navigation-next " aria-label="Next page""><i class="fa fa-angle-right"></i></a>
+
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"facebook": true,
+"twitter": true,
+"google": false,
+"weibo": false,
+"instapper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/Flavjack/GermBook/Gindex.Rmd",
+"text": "Edit"
+},
+"download": ["bookdown.pdf", "bookdown.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    if (location.protocol !== "file:" && /^https?:/.test(script.src))
+      script.src  = script.src.replace(/^https?:/, '');
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

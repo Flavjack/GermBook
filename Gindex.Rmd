@@ -40,13 +40,10 @@ The Synchrony Index (Z) has been proposed to assess the degree of overlap betwee
 
 $$Z=\frac{\sum_{ }^{ }C_{n_1,2}}{N}\ \ \Leftrightarrow\ \ C_{n_1,2}=\frac{n_i\left(n_i-1\right)}{2}\ \ \Leftrightarrow\ \ N=\frac{\sum_{ }^{ }n_i\left(\sum_{ }^{ }n_i-1\right)}{2}$$
 
-**Where** C~n~1~,2: combination of germinated seeds in i^th^ time; n~i~:number of germinated seed in the time i.
+**Where** C~n~~1~,2: combination of germinated seeds in i^th^ time; n~i~:number of germinated seed in the time i.
 
 
-Table 01 Limits of the each germination variable; n: number of total seed in germination condition.
-
-
-```{r fig.align='center', echo=FALSE, include=identical(knitr:::pandoc_to(), 'html')}
+```{r varsum, out.width='70%', fig.cap='Limits of the each germination variable; n: number of total seed in germination condition.',fig.align='center', echo=FALSE, include=identical(knitr:::pandoc_to(), 'html')}
 knitr::include_graphics('img/varsum.png')
 ```
 
