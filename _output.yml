@@ -1,14 +1,15 @@
 bookdown::gitbook:
+  css: css/style.css
   config:
     toc:
       collapse: subsection
       before: |
-        <li><a href="./"> GerminaQuant:User Manual</a></li>
+        <li><a href="./"> GerminaQuant:User Manual </a></li>
       after: |
-        <li><a href="https://flavjack.shinyapps.io/germinaquant/" target="blank"> GerminaQuant </a></li>
+        <li><a href="https://flavjack.shinyapps.io/germinaquant/" target="blank">GerminaQuant App</a></li>
     download: [pdf, epub]
     edit:
-      link: "https://github.com/Flavjack/GermBook/%s"
+      link: https://github.com/Flavjack/GermBook/%s
       text: "Edit"
 bookdown::pdf_book:
   includes:

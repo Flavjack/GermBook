@@ -32,6 +32,14 @@ knitr::include_graphics('img/germinaquant.png')
 
 **GerminaQuant** App allows make the calculation for the germination variables incredibly easy in a interactive applications build in R [@R-base], based in GerminaR and Shiny [@R-shiny] package. GerminaQuant app is reactive!. Outputs change instantly as users modify inputs, without requiring a reload the app.
 
-The principal features of the application allow calculate the principal germination variables, statistical analysis and easy way to plot the results.
+**Features**
 
+  - Allow calculate the princiapal Germination Variables.
+  - Statistical Analysis for Germination Variables.
+  - Easy way to plot the results.
+
+```{r univ, out.width='20%',fig.show='hold', fig.align='center', echo=FALSE, include=identical(knitr:::pandoc_to(), 'html')}
+knitr::include_graphics('img/ufpe.png')
+knitr::include_graphics('img/ufrpe.png')
+```
 

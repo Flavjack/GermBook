@@ -2,7 +2,7 @@
 
 ## Field Book
 
-For using the GerminaQuant app is necessary that you have a data with germination values. You can use a data [sample](https://docs.google.com/spreadsheets/d/1QziIXGOwb8cl3GaARJq6Ez6aU7vND_UHKJnFcAKx0VI/edit#gid=667855537) for use the software in the following link: GerminaQuant Data Sample. The document should be in "csv" format. In case for use the sample, open the link and download the data in csv format.
+For using the GerminaQuant app is necessary that you have a data with germination values. You can use a data [sample](https://docs.google.com/spreadsheets/d/1QziIXGOwb8cl3GaARJq6Ez6aU7vND_UHKJnFcAKx0VI/edit#gid=667855537) for use GerminaQuant App. Open the link and download the data in csv format. The document should be in "csv" format.
 
 Files >> Download >> Comma Separated Values (.csv, current sheet) >> "GerminaQuant - Sample.csv"
 

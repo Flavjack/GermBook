@@ -11,7 +11,6 @@ The field book should have 3 essential parts; the factor columns (red). It will 
 
 You can design your own field book with different names in the column, remember you need at least  one column with factors or treatments, the column with the number of seed for each experimental unit and the evaluation days (with prefix) according to the time lapse of your experiment.
 
-
 ```{r dtorg, out.width='70%', fig.cap='Layout for germination evaluation process. The factor column (red) are according the experimental design. The seed number column (green) for the number of seed sown and the evaluation columns (blue) are for accounting the germination.',fig.align='center', echo=FALSE, include=identical(knitr:::pandoc_to(), 'html')}
 knitr::include_graphics('img/dtorg.png')
 ```
