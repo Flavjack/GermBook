@@ -1,5 +1,5 @@
-book_filename: bookdown
-repo: https://github.com/Flavjack/GermBook
+book_filename: "germinaquant"
+repo: "https://github.com/Flavjack/GermBook"
 output_dir: _book
 clean: [packages.bib, bookdown.bbl]
 
