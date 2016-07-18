@@ -21,7 +21,7 @@ $$ t=\frac{\sum_{i=1}^kn_it_i}{\sum_{i=1}^kn_i} $$
 
 The average speed of germination is defined as the reciprocal of the average time germination [@Ranal2006].
 
-$$ v\ =\frac{1}{i} $$
+$$ v\ =\frac{1}{t} $$
 
 **Where** t: mean germination time
 
@@ -43,7 +43,18 @@ $$Z=\frac{\sum_{ }^{ }C_{n_1,2}}{N}\ \ \Leftrightarrow\ \ C_{n_1,2}=\frac{n_i\le
 **Where** C~n~~1~,2: combination of germinated seeds in i^th^ time; n~i~:number of germinated seed in the time i.
 
 
-```{r varsum, out.width='70%', fig.cap='Limits of the each germination variable; n: number of total seed in germination condition.',fig.align='center', echo=FALSE, include=identical(knitr:::pandoc_to(), 'html')}
-knitr::include_graphics('img/varsum.png')
+## Limits of germination values and units
+
+```{r varsum, echo=FALSE}
+tab <- data.frame( 
+"Variables" = c("Germination (g)", "Mean Germination Time (t)", "Mean Germination Rate (v)", "Uncertainty Index (U)", "Synchrony Index (Z)" ), 
+"limits" = c('$0<=g<=100$', '$0<t<=k$', '$0<=v<=1$', '$0<=U<=log_2n$', '$0<= Z<=1$'), 
+"Units" = c("%", "days", "days^1^", "bit", "-"))
+
+knitr::kable(
+  tab, 
+  booktabs = TRUE,
+  caption = 'Limits of the each germination variable; n: number of total seed in germination condition.'
+  )
 ```
 

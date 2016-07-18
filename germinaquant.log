@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.11.17)  17 JUL 2016 04:19
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.11.17)  17 JUL 2016 23:20
 entering extended mode
 **germinaquant.tex
 (germinaquant.tex
@@ -904,7 +904,7 @@ Chapter 2.
 [9] [10]
 Chapter 3.
 
-LaTeX Warning: Reference `fig:dtorg' on page 11 undefined on input line 279.
+LaTeX Warning: Reference `fig:dtorg' on page 11 undefined on input line 299.
 
 [11
 
@@ -913,13 +913,15 @@ LaTeX Warning: Reference `fig:dtorg' on page 11 undefined on input line 279.
 ]
 Chapter 4.
 
-LaTeX Warning: Reference `fig:tabs' on page 13 undefined on input line 302.
+Overfull \hbox (427.6761pt too wide) in paragraph at lines 329--341
+ [][] 
+ []
 
-<germinaquant_files/figure-latex/app-1.pdf, id=215, 469.755pt x 3802.205pt>
+<germinaquant_files/figure-latex/app-1.pdf, id=222, 469.755pt x 3802.205pt>
 File: germinaquant_files/figure-latex/app-1.pdf Graphic file (type pdf)
 <use germinaquant_files/figure-latex/app-1.pdf>
 Package pdftex.def Info: germinaquant_files/figure-latex/app-1.pdf used on inpu
-t line 308.
+t line 346.
 (pdftex.def)             Requested size: 80.35904pt x 650.42749pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -935,23 +937,20 @@ Overfull \vbox (29.70012pt too high) has occurred while \output is active []
 ]
 Chapter 5.
 
-LaTeX Warning: Reference `fig:impdt' on page 17 undefined on input line 332.
+LaTeX Warning: Reference `fig:impdt' on page 17 undefined on input line 370.
 
 
-LaTeX Warning: Reference `fig:csv' on page 17 undefined on input line 343.
+LaTeX Warning: Reference `fig:csv' on page 17 undefined on input line 381.
 
 
-LaTeX Warning: Reference `fig:var' on page 17 undefined on input line 349.
-
-
-LaTeX Warning: Reference `fig:dwl' on page 17 undefined on input line 352.
+LaTeX Warning: Reference `fig:dwl' on page 17 undefined on input line 414.
 
 [17]
 
-LaTeX Warning: Reference `fig:gtime' on page 18 undefined on input line 371.
+LaTeX Warning: Reference `fig:gtime' on page 18 undefined on input line 433.
 
 
-LaTeX Warning: Reference `fig:bplot' on page 18 undefined on input line 381.
+LaTeX Warning: Reference `fig:bplot' on page 18 undefined on input line 443.
 
 [18]
 Chapter 6.
@@ -960,27 +959,27 @@ Chapter 6.
 ] [20
 
 ])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 405.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 467.
 [21]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 405.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 467.
 (germinaquant.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 405.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 405.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 467.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 467.
 Package rerunfilecheck Info: File `germinaquant.out' has not changed.
-(rerunfilecheck)             Checksum: 0C2B0C0E9BBE5431F951E9668C838B65;3204.
+(rerunfilecheck)             Checksum: E1ED6973262D4092E4E90F523981B976;3465.
 
 LaTeX Warning: There were undefined references.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 405.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 467.
  ) 
 Here is how much of TeX's memory you used:
- 12769 strings out of 493673
- 184337 string characters out of 3141577
- 283865 words of memory out of 3000000
- 15817 multiletter control sequences out of 15000+200000
+ 12777 strings out of 493673
+ 184451 string characters out of 3141577
+ 286237 words of memory out of 3000000
+ 15821 multiletter control sequences out of 15000+200000
  61500 words of font info for 77 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 32i,6n,35p,250b,372s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 32i,8n,35p,308b,372s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}{C:/Program F
 iles (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-rm.enc}{C:/Program Files (x86)/MiKT
 eX 2.9/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Program Files (x86)/MiKTeX 2.9/font
@@ -998,9 +997,9 @@ m Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmr7.pfb><C:/Program Files (x86)
 /fonts/type1/public/lm/lmri12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type
 1/public/lm/lmro10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm
 /lmsy10.pfb>
-Output written on germinaquant.pdf (21 pages, 515331 bytes).
+Output written on germinaquant.pdf (21 pages, 519517 bytes).
 PDF statistics:
- 368 PDF objects out of 1000 (max. 8388607)
- 56 named destinations out of 1000 (max. 500000)
- 12462 words of extra memory for PDF output out of 14400 (max. 10000000)
+ 378 PDF objects out of 1000 (max. 8388607)
+ 60 named destinations out of 1000 (max. 500000)
+ 12470 words of extra memory for PDF output out of 14400 (max. 10000000)
 

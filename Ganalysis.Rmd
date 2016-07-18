@@ -1,10 +1,21 @@
 # Germination analysis
 
-After fish the data collection of the germination process these information can be processed using GerminaQuant App. The web application can be used in any device connected to the internet in an interactive way. The application is compound in tabs (Table \@ref(fig:tabs)) that allow to made the analysis very easy. 
+After fish the data collection of the germination process these information can be processed using GerminaQuant App. The web application can be used in any device connected to the internet in an interactive way. The application is compound in tabs (Table \@ref(tab:tabs)) that allow to made the analysis very easy. 
 
-```{r tabs, out.width='70%', fig.cap='Name and description of each tab of GerminaQuant App for evaluate and analyze the  germination process.',fig.align='center', echo=FALSE, include=identical(knitr:::pandoc_to(), 'html')}
-knitr::include_graphics("img/tabs.png")
+
+```{r tabs, echo=FALSE}
+tab <- data.frame( 
+"Tabs" = c("Introduction", "Data Import", "Germination Analysis", "Statisdtical Analysis", "Germination in Time", "Box Plot"), 
+"Description" = c('Presentation of GerminaQuant App and description of the germination variables', "Allow to upload the fieldbook, visualize all the data set for analysis and choose the frequency of the germination.", "Calculate automatically the germination variables and export the data file.", "Allow to choose the variables according the experimental design for analysis of variance and automatically calculate and plot the mean comparison test for the variables selected.", "Selecting the independent variable, allows to plot the germination process.", "Exploratory data graph for evaluate the dispersion of the data throw the box plot (outlier and overlapping detection values).")
+)
+
+knitr::kable(
+  tab, 
+  booktabs = TRUE,
+  caption = 'Name and description of each tab of GerminaQuant App for evaluate and analyze the  germination process'
+  )
 ```
+
 
 ## GerminaQuant Web Application
 

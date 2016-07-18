@@ -11,6 +11,17 @@ bookdown::gitbook:
     edit:
       link: https://github.com/Flavjack/GermBook/%s
       text: "Edit"
+      fontsettings:
+      theme: sepia
+      family: sans
+    sharing:
+      facebook: no
+      twitter: no
+      google: no
+      weibo: no
+      instapper: no
+      vk: no
+      all: ['facebook', 'google', 'twitter']
 bookdown::pdf_book:
   includes:
     in_header: preamble.tex

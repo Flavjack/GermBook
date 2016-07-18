@@ -27,11 +27,21 @@ Below of the parameter for evaluation, you will find the option to select the pa
 
 ## Germination analysis
 
-If the parameter in the "Import Data" tab are correct, in "Germination analysis" tab will be appear the values of the eleven germination variables for each experimental unit. Figure \@ref(fig:var)
+If the parameter in the "Import Data" tab are correct, in "Germination analysis" tab will be appear the values of the eleven germination variables for each experimental unit. Table \@ref(tab:var)
 
-```{r var, out.width='70%', fig.cap='Variables calculated with GerminaQuant',fig.align='center', echo=FALSE, include=identical(knitr:::pandoc_to(), 'html')}
-knitr::include_graphics('img/var.png')
+```{r var, echo=FALSE}
+tab <- data.frame( 
+"Variables" = c("Germinatied seeds", "Germination percentage", "Arcsin of germination", "Mean Germination Time", "Mean Germination Rate", "Germination speed", "Germination uncertainty index", "Germination synchrony index", "Variance of mean germination time", "Standard desviation of mean germination time", "Coefficient of variance of mean germination time" ), 
+"Abbreviations" = c("GRS", "GRP", "ASG", "MGT", "MGR", "GSP", "UNC", "SYN", "VGT", "SDG", "CVG"), 
+"Units" = c("Numeric", "%", "Numeric", "Time", "Time^-1^", "Time", "bit", "Numeric", "Time^2^", "Time", "%"))
+
+knitr::kable(
+  tab, 
+  booktabs = TRUE,
+  caption = 'Variables calculated with GerminaQuant.'
+  )
 ```
+
 
 GerminaQuant app allow to download the file in "csv" format with the calculation of the germination variables. Figure \@ref(fig:dwl)
 
