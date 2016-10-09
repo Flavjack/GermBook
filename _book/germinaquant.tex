@@ -1,0 +1,403 @@
+\documentclass[]{book}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+\else % if luatex or xelatex
+  \ifxetex
+    \usepackage{mathspec}
+  \else
+    \usepackage{fontspec}
+  \fi
+  \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
+\fi
+% use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+% use microtype if available
+\IfFileExists{microtype.sty}{%
+\usepackage{microtype}
+\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\usepackage[margin=1in]{geometry}
+\usepackage{hyperref}
+\hypersetup{unicode=true,
+            pdftitle={GerminaQuant},
+            pdfauthor={Flavio Lozano Isla; Omar Benites Alfaro; Marcelo Francisco Pompelli},
+            pdfborder={0 0 0},
+            breaklinks=true}
+\urlstyle{same}  % don't use monospace font for urls
+\usepackage{natbib}
+\bibliographystyle{apalike}
+\usepackage{longtable,booktabs}
+\usepackage{graphicx,grffile}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+\IfFileExists{parskip.sty}{%
+\usepackage{parskip}
+}{% else
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{5}
+% Redefines (sub)paragraphs to behave more like sections
+\ifx\paragraph\undefined\else
+\let\oldparagraph\paragraph
+\renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+\let\oldsubparagraph\subparagraph
+\renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+
+%%% Use protect on footnotes to avoid problems with footnotes in titles
+\let\rmarkdownfootnote\footnote%
+\def\footnote{\protect\rmarkdownfootnote}
+
+%%% Change title format to be more compact
+\usepackage{titling}
+
+% Create subtitle command for use in maketitle
+\newcommand{\subtitle}[1]{
+  \posttitle{
+    \begin{center}\large#1\end{center}
+    }
+}
+
+\setlength{\droptitle}{-2em}
+  \title{GerminaQuant}
+  \pretitle{\vspace{\droptitle}\centering\huge}
+  \posttitle{\par}
+  \author{Flavio Lozano Isla \\ Omar Benites Alfaro \\ Marcelo Francisco Pompelli}
+  \preauthor{\centering\large\emph}
+  \postauthor{\par}
+  \predate{\centering\large\emph}
+  \postdate{\par}
+  \date{09 October 2016}
+
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{framed,color}
+\definecolor{shadecolor}{RGB}{248,248,248}
+
+\ifxetex
+  \usepackage{letltxmacro}
+  \setlength{\XeTeXLinkMargin}{1pt}
+  \LetLtxMacro\SavedIncludeGraphics\includegraphics
+  \def\includegraphics#1#{% #1 catches optional stuff (star/opt. arg.)
+    \IncludeGraphicsAux{#1}%
+  }%
+  \newcommand*{\IncludeGraphicsAux}[2]{%
+    \XeTeXLinkBox{%
+      \SavedIncludeGraphics#1{#2}%
+    }%
+  }%
+\fi
+
+\newenvironment{rmdblock}[1]
+  {\begin{shaded*}
+  \begin{itemize}
+  \renewcommand{\labelitemi}{
+    \raisebox{-.7\height}[0pt][0pt]{
+      {\setkeys{Gin}{width=3em,keepaspectratio}\includegraphics{images/#1}}
+    }
+  }
+  \item
+  }
+  {
+  \end{itemize}
+  \end{shaded*}
+  }
+\newenvironment{rmdnote}
+  {\begin{rmdblock}{note}}
+  {\end{rmdblock}}
+\newenvironment{rmdcaution}
+  {\begin{rmdblock}{caution}}
+  {\end{rmdblock}}
+\newenvironment{rmdimportant}
+  {\begin{rmdblock}{important}}
+  {\end{rmdblock}}
+\newenvironment{rmdtip}
+  {\begin{rmdblock}{tip}}
+  {\end{rmdblock}}
+\newenvironment{rmdwarning}
+  {\begin{rmdblock}{warning}}
+  {\end{rmdblock}}
+
+\begin{document}
+\maketitle
+
+{
+\setcounter{tocdepth}{1}
+\tableofcontents
+}
+\chapter*{Introduction}\label{introduction}
+\addcontentsline{toc}{chapter}{Introduction}
+
+\textbf{GerminaQuant} allows make the calculation of the germination
+variables incredibly easy in an interactive applications build in R
+\citep{R-base}, based in GerminaR and Shiny \citep{R-shiny} package.
+GerminaQuant app is reactive!. Outputs change instantly as users modify
+inputs, without requiring a reload the app. The principal features of
+the application allow calculate the princiapal germination Variables,
+statistical analysis and easy way to plot the results.
+
+\chapter{Evaluation of the seed germination
+process}\label{evaluation-of-the-seed-germination-process}
+
+The physiology and seed technology have provided valuable tools for the
+production of high quality seed and treatments and storage conditions
+\citep{Marcos-Filho1998}. In basic research, the seeds are studied
+exhaustively, and the approach of its biology is performed to fully
+exploit the dormancy and germination \citep{Penfield2009}. An important
+tool for indicate the performance of a seed lot is the precise
+quantification of germination through accurate analysis of the
+cumulative germination data \citep{Joosen2010}. Time, velocity,
+homogeneity, uncertainty and synchrony are measurements that inform the
+dynamics of the germination process. It is interesting not only for
+physiologists and seed technologists, but also for environmentalists,
+since it is possible to predict the degree of success of the species,
+based on the seed crop ability to redistribute germination over time,
+allowing the recruitment of part of the seedlings formed
+\citep{Ranal2006}.
+
+\chapter{Germination variables}\label{germination-variables}
+
+\section{Germinability (G)}\label{germinability-g}
+
+According to \citet{Labouriau1983a}, germinability is the percentage of
+seeds in which the germination process comes to the end in the
+experimental conditions by the intraseminal growth, resulting in the
+protrusion (or emergence) of a living embryo.
+
+\[ g=\left(\frac{\sum_{i=1}^kn_1}{N}\right)100 \ \ (in\ percentage;\ expressed\ in\ the\ program\ as\ GRP)\]
+
+\textbf{Where:} \(n_i\): number of germinated seed in the \(i^{th}\)
+time; N: total number of seed in each experimental unit.
+
+\section{\texorpdfstring{Mean Germination Time (t) and Standard
+Deviation
+(S\textsubscript{t})}{Mean Germination Time (t) and Standard Deviation (St)}}\label{mean-germination-time-t-and-standard-deviation-st}
+
+The mean germination time was proposed by Haberlandt in 1875
+\citep{Labouriau1983a} and used by \citet{Czabator1962} as mean length
+of incubation time (see \citet{Ranal2006} for other details). It is
+calculated as the weighted mean of the germination time (hour, day or
+other time unit). The number of germinated seeds at the intervals
+established for the data collection is used as weight \citep{Ranal2006}.
+
+\[ \overline{t}=\frac{\sum_{i=1}^kn_it_i}{\sum_{i=1}^kn_i} \ (in\ hour,\ day\ or\ other\ time\ unit; \ expressed\ in\ the\ program\ as\ MGT)\]
+
+\[S_t=\sqrt{\left\{\frac{\left\{\sum_{_{i=1}}^kn_i\left(t_i-\overline{t}\right)^2\right\}}{\sum_{_{i=1}}^kn_i-1}\right\}} \ \ (in\ the\ same\ time\ unit\ of\ the\ mean\ germination\ time;\ expressed\ in\ the\ program\ as\ SDG)\]
+
+\textbf{Where} \(\bar{t}_i\): time from the start of the experiment to
+the \(i^{th}\) observation (hour, day or other time unit); \(n_i\):
+number of germinated seeds in the \(i^{th}\) time (not the accumulated
+number) and \(k\): the last time of observation.
+
+\section{Coefficient of Variation of the Germination
+Time}\label{coefficient-of-variation-of-the-germination-time}
+
+\[CV_t=\frac{\left\{S_t\right\}}{\overline{t}}100\ \left(in\ the\ same\ tine\ unit\ of\ the\ mean\ ger\min ation\ time;\ \exp ressed\ in\ the\ program\ as\ SDG\right)\]
+\textbf{where} \(S_t\): standard deviation of the germination time and
+\(\overline{t}\): mean germination time.
+
+\section{Mean Germination Rate (v)}\label{mean-germination-rate-v}
+
+The mean germination rate is defined as the reciprocal of the mean
+germination time, since the mean germination rate increases and
+decreases with \(\frac{1}{\overline{t}}\), not with \(\overline{t}\)
+\citep{Labouriau1983b}.
+
+\[ \overline{v}=\frac{1}{\overline{t}}\ \left(in\ hours^{-1},\ day^{-1}\ or\ other\ reciprocal\ time\ unit,\ \exp ressed\ in\ the\ program\ as\ MGR\right) \]
+
+\section{Uncertainty Index (U)}\label{uncertainty-index-u}
+
+This measurement is an adaptation of the Shannon index and measures the
+degree of uncertainty associated to the distribution of the relative
+frequency of germination \citep{labouriau1976physiology}. Low values
+indicate more synchronized germination \citep{Ranal2006}.
+
+\[U\ =\ -\sum_{i=1}^kf_i\log_2f_i\ \ \left(in\ bit;\ \exp ressed\ in\ the\ program\ as\ UNC\right),\ being\ f_i=\frac{n_i}{\sum_{i=1}^kn_i}\]
+
+\textbf{Where} \(f_i\): relative frequency of germination; \(n_i\):
+number of seed germinated in the \(i^{th}\) time, and \(k\): the last
+day of germination.
+
+\section{Synchronyzation Index (Z)}\label{synchronyzation-index-z}
+
+This index was proposed by \citet{primack1985patterns} to assess the
+degree of overlapping of flowering among individuals in a population and
+\citet{Ranal2006} adopted it for seed germination. The synchrony of
+germination of one seed with another assumed \(Z=1\) when the
+germination of all seeds occur at the same time and \(Z = 0\) when at
+least two seeds can germinate, one at each time.
+
+\[Z=\frac{\sum_{ }^{ }C_{n_1,2}}{N}\ \left(a\dim ensional\ measurement;\ \exp ressed\ in\ the\ program\ as\ SYN\right);\ being\ C_{n_1,2}=\frac{n_i\left(n_i-1\right)}{2}\ ;\ N=\frac{\sum_{ }^{ }n_i\left(\sum_{ }^{ }n_i-1\right)}{2}\]
+
+\textbf{Where} \(C_{n_i,2}\): combination of germinated seeds in
+\(i^{th}\) time, two together, and \(n_i\): number of germinated seed in
+the \(i^{th}\).
+
+\section{Limits and units of the germination variables in
+GerminaQuant}\label{limits-and-units-of-the-germination-variables-in-germinaquant}
+
+\begin{table}
+
+\caption{\label{tab:varsum}Germination variables evaluated in GerminaQuant and limits according @Ranal2006 ; where: \(n_i\), number of seed germinated in \(i^{nth}\) time ; \(K\), the last day of the avaliation process for germination.}
+\centering
+\begin{tabular}[t]{llll}
+\toprule
+variables & abbreviation & limits & units\\
+\midrule
+germinated seed number & GSN & \textbackslash{}(0 \textbackslash{}le n \textbackslash{}le n\_i\textbackslash{}) & \textbackslash{}(count\textbackslash{})\\
+germinability & GNP & \textbackslash{}(0 \textbackslash{}le g \textbackslash{}le 100\textbackslash{}) & \textbackslash{}(\textbackslash{}\%\textbackslash{})\\
+germination asin & ASG & \textbackslash{}(0 \textbackslash{}le arsin \textbackslash{}le 1\textbackslash{}) & \textbackslash{}(grade\textbackslash{})\\
+mean germination time & MGT & \textbackslash{}(0 \textbackslash{}le t \textbackslash{}le k\textbackslash{}) & \textbackslash{}(time\textbackslash{})\\
+germination speed & SPG & \textbackslash{}(0 < g\_s \textbackslash{}le 100\textbackslash{}) & \textbackslash{}(\textbackslash{}\%\textbackslash{})\\
+\addlinespace
+mean germination rate & MGR & \textbackslash{}(0 < v \textbackslash{}le 1\textbackslash{}) & \textbackslash{}(time\textasciicircum{}\{-1\}\textbackslash{})\\
+Synchronyzation Index & SYN & \textbackslash{}(0 \textbackslash{}le Z \textbackslash{}le 1\textbackslash{}) & \textbackslash{}(-\textbackslash{})\\
+Uncertainty Index & UNC & \textbackslash{}(0 \textbackslash{}le U \textbackslash{}le log\_2 n\_i\textbackslash{}) & \textbackslash{}(bit\textbackslash{})\\
+germination standard deviation & SDG & \textbackslash{}(0 < s\_t\textasciicircum{}2  \textbackslash{}le \textbackslash{}infty\textbackslash{}) & \textbackslash{}(time\textasciicircum{}2\textbackslash{})\\
+germination variance & VGT & \textbackslash{}(0 < s\_t  \textbackslash{}le \textbackslash{}infty\textbackslash{}) & \textbackslash{}(time\textbackslash{})\\
+Coefficient of variation & CVG & \textbackslash{}(0 < CV\_t  \textbackslash{}le \textbackslash{}infty\textbackslash{}) & \textbackslash{}(\textbackslash{}\%\textbackslash{})\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\chapter{Germination field book}\label{germination-field-book}
+
+For correct analysis and fast data processing is important to take into
+account that the data organization and the correct data collection of
+the germination process is essential. In this section, we going to
+explain how can you collect and organize your data.
+
+For data example and layout, you can access and download GerminaQuant
+\href{https://docs.google.com/spreadsheets/d/1QziIXGOwb8cl3GaARJq6Ez6aU7vND_UHKJnFcAKx0VI/edit\#gid=667855537}{spreadsheet}.
+
+\section{Data Organization}\label{data-organization}
+
+The field book should have three essential parts. The treatment column
+(red), according to the experimental design (1); the seed number column
+(green) (2), and the observation moment column (blue) (3). In the green
+column you will indicate the number of seeds sown in each experimental
+unit and in the blue columns the germination values (Figure
+\ref{fig:dtorg}). You can design your own field book with different
+names in the column.
+
+\section{Data Collection}\label{data-collection}
+
+The evaluation of the germination process is obtained of the count of
+the germination in each experimental unit and It can be evaluated in
+time lapse of hours, days or months in continuous interval of the same
+length always beginning with the time zero (ei. Ti00), until the end of
+the germination process or according to the researcher criteria
+
+\chapter{Germination analysis}\label{germination-analysis}
+
+After the data collection, the information can be processed using
+GerminaQuant App. The web application can be used in any device,
+connected to the internet, in an interactive way. The application is
+compound in tabs (Table \ref{tab:tabs}) that allow to make the analysis
+very easy.
+
+\begin{table}
+
+\caption{\label{tab:tabs}Name and description of each tab of GerminaQuant to evaluate and analyze the germination process}
+\centering
+\begin{tabular}[t]{ll}
+\toprule
+Tabs & Description\\
+\midrule
+Introduction & Presentation of GerminaQuant and description of the germination variables\\
+Data Import & Allow to upload the fieldbook, visualize all the data and chose the parameter for the analysis .\\
+Germination Analysis & Calculate automatically the germination variables and export the data file.\\
+Statisdtical Analysis & Allow to chose the variables according the experimental design for analysis of variance and summarise the information\\
+Multi Plot & Plot the mean comparison test for the variables selected in diffrente plots: bar, line and boxplot.\\
+Germination in Time & Selecting the treatment, allows plotting the germination process.\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\chapter{GerminaQuant data
+processing}\label{germinaquant-data-processing}
+
+\section{Field Book}\label{field-book}
+
+For using the GerminaQuant is necessary that you have a data with
+germination values. You can use a following data
+\href{https://docs.google.com/spreadsheets/d/1QziIXGOwb8cl3GaARJq6Ez6aU7vND_UHKJnFcAKx0VI/edit\#gid=667855537}{sample}.
+Open the link and download the data in csv format.
+
+Files \textgreater{}\textgreater{} Download \textgreater{}\textgreater{}
+Comma Separated Values (.csv, current sheet)
+\textgreater{}\textgreater{} ``GerminaQuant - Sample.csv''
+
+If you have a google account you can clone the document for you and edit
+it online and download for your own analysis.
+
+\section{Import Data}\label{import-data}
+
+When you have your field book, you can go
+\href{https://flavjack.shinyapps.io/germinaquant/}{GerminaQuant} and go
+``Data Import'' tab. Figure \ref{fig:impdt}.
+
+Choose the file in ``csv'' format it will be analysed. In ``Column with
+seeds number'' you have to write the name of the column containing the
+information of the number of seed sown in each experimental unit,
+``Prefix of evaluation days'' you have to put the prefix of the name
+called for the day for evaluate the germination time lapse.
+
+Below of the parameter for evaluation, you will find the option to
+select the parameter for the ``csv'' format file. In such way the file
+should have a table form. Figure \ref{fig:csv}
+
+\section{Indices calculation}\label{indices-calculation}
+
+If the parameter in the ``Import Data'' tab are correct, in
+``Germination analysis'' tab will be performed and the values of the
+germination variables for each experimental unit will be show. Table
+\ref{tab:varsum}. GerminaQuant app allows downloading the file in
+``csv'' format with the calculation of the germination variables. Figure
+\ref{fig:dwl}
+
+\section{Statistical analysis}\label{statistical-analysis}
+
+In this tab, the app perform a factorial variance analysis, calculate
+the statistical description of the factor, the mean differences through
+Student Newman Keuls \citep{R-agricolae} and made the graphics
+\citep{R-ggplot2} for the chosen variable.
+
+Remember, the independent variables will be the factor in your field
+book and the dependent variable will be any of the germination
+variables. Automatically the app will generate the graphs for the
+variable chosen and give the mean comparison test. The axis label can be
+edited manually filling the case in the ``Graphics labels'' section. The
+bar and line graphs are represented by the mean and central line is the
+standard error.
+
+\section{Germination in Time}\label{germination-in-time}
+
+This Tab allows to visualize the germination process included in the
+field book. Figure \ref{fig:gtime}
+
+The app give two graphics, the first is the germination in percentage in
+time lapse and the second the relative germination that calculate the
+germination according the total number of seed germinated.
+
+\bibliography{book,packages}
+
+
+\end{document}

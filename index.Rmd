@@ -1,5 +1,5 @@
 --- 
-title: "GerminaQuant App"
+title: "GerminaQuant"
 author: 
 
 - "Flavio Lozano Isla"
@@ -12,13 +12,13 @@ site: bookdown::bookdown_site
 output: bookdown::gitbook
 
 documentclass: book
-bibliography: [book.bib, packages.bib]
+bibliography: [packages.bib, book.bib]
 biblio-style: apalike
 link-citations: yes
 
 github-repo: "Flavjack/GermBook"
 cover-image: "img/germinaquant.png"
-description: "A guide for analisis of germination variables and usage of GerminaQuant web App."
+description: "A guide for analisis of germination variables and usage of GerminaQuant."
 ---
 
 
@@ -30,13 +30,7 @@ knitr::include_graphics('img/germinaquant.png')
 ```
 
 
-**GerminaQuant** App allows make the calculation for the germination variables incredibly easy in a interactive applications build in R [@R-base], based in GerminaR and Shiny [@R-shiny] package. GerminaQuant app is reactive!. Outputs change instantly as users modify inputs, without requiring a reload the app.
-
-**Features**
-
-  - Allow calculate the princiapal Germination Variables.
-  - Statistical Analysis for Germination Variables.
-  - Easy way to plot the results.
+**GerminaQuant** allows make the calculation of the germination variables incredibly easy in an interactive applications build in R [@R-base], based in GerminaR and Shiny [@R-shiny] package. GerminaQuant app is reactive!. Outputs change instantly as users modify inputs, without requiring a reload the app. The principal features of the application allow calculate the princiapal germination Variables, statistical analysis and easy way to plot the results.
 
 ```{r univ, out.width='20%',fig.show='hold', fig.align='center', echo=FALSE, include=identical(knitr:::pandoc_to(), 'html')}
 knitr::include_graphics('img/ufpe.png')

@@ -1,5 +1,0 @@
-# Demostrative Video
-
-- [GerminaQuant with R console](https://drive.google.com/file/d/0B4Ou4jPpNgJbeHVoeG54dGo3bm8/view)
-
-- [GerminaQuant web Application](https://drive.google.com/file/d/0B4Ou4jPpNgJbaVJMUFUwc2Z6QnM/view)

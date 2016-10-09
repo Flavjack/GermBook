@@ -6,7 +6,7 @@ bookdown::gitbook:
       before: |
         <li><a href="./"> GerminaQuant:User Manual </a></li>
       after: |
-        <li><a href="https://flavjack.shinyapps.io/germinaquant/" target="blank">GerminaQuant App</a></li>
+        <li><a href="https://flavjack.shinyapps.io/germinaquant/" target="blank">GerminaQuant</a></li>
     download: [pdf, epub]
     edit:
       link: https://github.com/Flavjack/GermBook/%s

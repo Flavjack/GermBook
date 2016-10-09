@@ -1,60 +1,76 @@
 # Germination variables
 
-## Germination (g)
+## Germinability (G)
 
-According @GouveaLabouriau1983, the germinability of a sample of is the percentage of seeds in which the seed germination process comes to the end, in experimental conditions by the seminal intrauterine growth resulting protrusion (or emergence) of a living embryo. In general, it is presented as percentage, accompanied by some degree of dispersion, but it is possible to use proportions to one or more samples may be subjected to statistical tests [@CARVALHO2005].
+According to @Labouriau1983a, germinability is the percentage of seeds in which the germination process comes to the end in the experimental conditions by the intraseminal growth, resulting in the protrusion (or emergence) of a living embryo.
 
-$$ g=\left(\frac{\sum_{i=1}^kn_1}{N}\right)100 $$
+
+$$ g=\left(\frac{\sum_{i=1}^kn_1}{N}\right)100 \ \ (in\ percentage;\ expressed\ in\ the\ program\ as\ GRP)$$
   
-**Where:** n~i~: number of germinated seed in the i^th^ time; N: total number of seed in each experimental unit.
+**Where:** $n_i$: number of germinated seed in the $i^{th}$ time; N: total number of seed in each experimental unit.
 
-## Mean Germination Time (t)
+## Mean Germination Time (t) and Standard Deviation (S~t~)
 
-It was proposed by Haberlandt in 1875. It is calculated as the weighted average germination time. The number of germinated seeds at the intervals established for the collection of data is used as weight. It is expressed in terms of the same units of time used in the germination count [@Czabator1962].
+The mean germination time was proposed by Haberlandt in 1875 [@Labouriau1983a] and used by @Czabator1962 as mean length of incubation time (see @Ranal2006 for other details). It is calculated as the weighted mean of the germination time (hour, day or other time unit). The number of germinated seeds at the intervals established for the data collection is used as weight [@Ranal2006]. 
 
-$$ t=\frac{\sum_{i=1}^kn_it_i}{\sum_{i=1}^kn_i} $$
 
-**Where** t~i~: Time of start of experiment tempo to observation (days or hours); n~i~:number of seed germinated the i^th^ time (number corresponding to i^th^ observation); k:the last day of germination.
+
+$$ \overline{t}=\frac{\sum_{i=1}^kn_it_i}{\sum_{i=1}^kn_i} \ (in\ hour,\ day\ or\ other\ time\ unit; \ expressed\ in\ the\ program\ as\ MGT)$$
+
+
+$$S_t=\sqrt{\left\{\frac{\left\{\sum_{_{i=1}}^kn_i\left(t_i-\overline{t}\right)^2\right\}}{\sum_{_{i=1}}^kn_i-1}\right\}} \ \ (in\ the\ same\ time\ unit\ of\ the\ mean\ germination\ time;\ expressed\ in\ the\ program\ as\ SDG)$$
+
+
+**Where** $\bar{t}_i$: time from the start of the experiment to the $i^{th}$ observation (hour, day or other time unit); $n_i$: number of germinated seeds in the $i^{th}$ time (not the accumulated number) and $k$: the last time of observation.
+
+
+## Coefficient of Variation of the Germination Time
+
+
+$$CV_t=\frac{\left\{S_t\right\}}{\overline{t}}100\ \left(in\ the\ same\ tine\ unit\ of\ the\ mean\ ger\min ation\ time;\ \exp ressed\ in\ the\ program\ as\ SDG\right)$$
+**where** $S_t$: standard deviation of the germination time and $\overline{t}$: mean germination time.
 
 
 ## Mean Germination Rate (v)
 
-The average speed of germination is defined as the reciprocal of the average time germination [@Ranal2006].
+The mean germination rate is defined as the reciprocal of the mean germination time, since the mean germination rate increases and decreases with $\frac{1}{\overline{t}}$, not with $\overline{t}$ [@Labouriau1983b].
 
-$$ v\ =\frac{1}{t} $$
+$$ \overline{v}=\frac{1}{\overline{t}}\ \left(in\ hours^{-1},\ day^{-1}\ or\ other\ reciprocal\ time\ unit,\ \exp ressed\ in\ the\ program\ as\ MGR\right) $$
 
-**Where** t: mean germination time
+## Uncertainty Index (U)
 
+This measurement is an adaptation of the Shannon index and measures the degree of uncertainty associated to the distribution of the relative frequency of germination [@labouriau1976physiology]. Low values indicate more synchronized germination [@Ranal2006].
 
-## Uncertainty Index  (U)
+$$U\ =\ -\sum_{i=1}^kf_i\log_2f_i\ \ \left(in\ bit;\ \exp ressed\ in\ the\ program\ as\ UNC\right),\ being\ f_i=\frac{n_i}{\sum_{i=1}^kn_i}$$
 
-The uncertainty index (U) is an adaptation of Shannon index measures the degree of uncertainty in predicting the informational entropy or uncertainty associated with the distribution of the relative frequency of germination [@GouveaLabouriau1983;@Labouriau1983]. Low values of U indicate frequencies with short peaks, i.e. the more concentrated the germination in time. Just a germinated seed changes the value of U. This means that u measures the degree of germination scattering.
-
-$$ -\sum_{i=1}^kf_i\log_2f_i\ \ \Leftrightarrow\ \ \ f_i=\frac{n_i}{\sum_{i=1}^kn_i}  $$
-
-**Where** f~i~: relative frequency of germination; n~i~:number of seed germinated in the  time  i number corresponding to i^th^ observation); k:the last day of germination.
-
-## Synchrony Index (Z)
-
-The Synchrony Index (Z) has been proposed to assess the degree of overlap between flowering individuals in a population. Adopting the idea expressed by @primack1985patterns, Synchrony index is the synchrony of germination of one seed with other seeds included in the same replication. When synchrony index = 1, germination of all the seeds occurs at the same time and when synchrony index = 0, at least two seeds can germinate one each time. Synchrony index produces a number if and only if there are two seeds finishing the seed germination process at the same time. Thus, the value of Z assessments is the grade of overlap between seed germination.
-
-$$Z=\frac{\sum_{ }^{ }C_{n_1,2}}{N}\ \ \Leftrightarrow\ \ C_{n_1,2}=\frac{n_i\left(n_i-1\right)}{2}\ \ \Leftrightarrow\ \ N=\frac{\sum_{ }^{ }n_i\left(\sum_{ }^{ }n_i-1\right)}{2}$$
-
-**Where** C~n~~1~,2: combination of germinated seeds in i^th^ time; n~i~:number of germinated seed in the time i.
+**Where** $f_i$: relative frequency of germination; $n_i$: number of seed germinated in the  $i^{th}$ time, and $k$: the last day of germination.
 
 
-## Limits of germination values and units
+## Synchronyzation Index (Z)
+
+This index was proposed by @primack1985patterns to assess the degree of overlapping of flowering among individuals in a population and @Ranal2006 adopted it for seed germination. The synchrony of germination of one seed with another assumed $Z=1$ when the germination of all seeds occur at the same time and $Z = 0$ when at least two seeds can germinate, one at each time. 
+
+$$Z=\frac{\sum_{ }^{ }C_{n_1,2}}{N}\ \left(a\dim ensional\ measurement;\ \exp ressed\ in\ the\ program\ as\ SYN\right);\ being\ C_{n_1,2}=\frac{n_i\left(n_i-1\right)}{2}\ ;\ N=\frac{\sum_{ }^{ }n_i\left(\sum_{ }^{ }n_i-1\right)}{2}$$
+
+**Where** $C_{n_i,2}$: combination of germinated seeds in $i^{th}$ time, two together, and $n_i$: number of germinated seed in the $i^{th}$.
+
+
+## Limits and units of the germination variables in GerminaQuant
 
 ```{r varsum, echo=FALSE}
-tab <- data.frame( 
-"Variables" = c("Germination (g)", "Mean Germination Time (t)", "Mean Germination Rate (v)", "Uncertainty Index (U)", "Synchrony Index (Z)" ), 
-"limits" = c('$0<=g<=100$', '$0<t<=k$', '$0<=v<=1$', '$0<=U<=log_2n$', '$0<= Z<=1$'), 
-"Units" = c("%", "days", "days^1^", "bit", "-"))
+
+var <- data.frame(
+  
+  "variables" = c("germinated seed number", "germinability", "germination asin", "mean germination time", "germination speed", "mean germination rate", "Synchronyzation Index", "Uncertainty Index", "germination standard deviation", "germination variance", "Coefficient of variation"),
+  "abbreviation"= c("GSN", "GNP", "ASG", "MGT", "SPG", "MGR", "SYN", "UNC", "SDG", "VGT", "CVG"),
+  "limits" = c("\\(0 \\le n \\le n_i\\)", "\\(0 \\le g \\le 100\\)", "\\(0 \\le arsin \\le 1\\)", "\\(0 \\le t \\le k\\)", "\\(0 < g_s \\le 100\\)", "\\(0 < v \\le 1\\)", "\\(0 \\le Z \\le 1\\)", "\\(0 \\le U \\le log_2 n_i\\)", "\\(0 < s_t^2  \\le \\infty\\)", "\\(0 < s_t  \\le \\infty\\)", "\\(0 < CV_t  \\le \\infty\\)"),
+  "units" = c("\\(count\\)", "\\(\\%\\)", "\\(grade\\)", "\\(time\\)", "\\(\\%\\)", "\\(time^{-1}\\)", "\\(-\\)", "\\(bit\\)", "\\(time^2\\)", "\\(time\\)", "\\(\\%\\)")
+)
 
 knitr::kable(
-  tab, 
+  var, 
   booktabs = TRUE,
-  caption = 'Limits of the each germination variable; n: number of total seed in germination condition.'
+  caption = "Germination variables evaluated in GerminaQuant and limits according @Ranal2006 ; where: \\(n_i\\), number of seed germinated in \\(i^{nth}\\) time ; \\(K\\), the last day of the avaliation process for germination."
   )
 ```
 
