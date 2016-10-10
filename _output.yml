@@ -1,17 +1,18 @@
 bookdown::gitbook:
   css: css/style.css
+  split_bib: FALSE
   config:
     toc:
-      collapse: subsection
+      collapse: section
       before: |
         <li><a href="./"> GerminaQuant:User Manual </a></li>
       after: |
-        <li><a href="https://flavjack.shinyapps.io/germinaquant/" target="blank">GerminaQuant</a></li>
+        <li><a href="https://flavjack.shinyapps.io/germinaquant/" target="blank">GerminaQuant web app</a></li>
     download: [pdf, epub]
     edit:
       link: https://github.com/Flavjack/GermBook/%s
       text: "Edit"
-      fontsettings:
+    fontsettings:
       theme: sepia
       family: sans
     sharing:

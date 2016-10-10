@@ -27,7 +27,7 @@
 <meta name="author" content="Omar Benites Alfaro">
 <meta name="author" content="Marcelo Francisco Pompelli">
 
-<meta name="date" content="2016-10-09">
+<meta name="date" content="2016-10-10">
 
 <script type="text/x-mathjax-config">
 MathJax.Hub.Config({
@@ -39,7 +39,7 @@ MathJax.Hub.Config({
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
-  
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
 <link rel="prev" href="germination-analysis.html">
 <link rel="next" href="references.html">
 
@@ -99,7 +99,7 @@ MathJax.Hub.Config({
 </ul></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
-<li><a href="https://flavjack.shinyapps.io/germinaquant/" target="blank">GerminaQuant</a></li>
+<li><a href="https://flavjack.shinyapps.io/germinaquant/" target="blank">GerminaQuant web app</a></li>
 
 </ul>
 
@@ -156,7 +156,7 @@ Figure 5.3: Dowload option for the calculated variables
 </div>
 <div id="statistical-analysis" class="section level2">
 <h2><span class="header-section-number">5.4</span> Statistical analysis</h2>
-<p>In this tab, the app perform a factorial variance analysis, calculate the statistical description of the factor, the mean differences through Student Newman Keuls <span class="citation">(de Mendiburu <a href="#ref-R-agricolae">2016</a>)</span> and made the graphics <span class="citation">(Wickham and Chang <a href="#ref-R-ggplot2">2016</a>)</span> for the chosen variable.</p>
+<p>In this tab, the app perform a factorial variance analysis, calculate the statistical description of the factor, the mean differences through Student Newman Keuls <span class="citation">(de Mendiburu <a href="references.html#ref-R-agricolae">2016</a>)</span> and made the graphics <span class="citation">(Wickham and Chang <a href="references.html#ref-R-ggplot2">2016</a>)</span> for the chosen variable.</p>
 <div class="figure" style="text-align: center"><span id="fig:stat"></span>
 <img src="img/stat.png" alt="Statitical analysis with ANOVA and mean comparison test" width="100%" />
 <p class="caption">
@@ -176,15 +176,6 @@ Figure 5.5: Germination in time plot
 </div>
 <p>The app give two graphics, the first is the germination in percentage in time lapse and the second the relative germination that calculate the germination according the total number of seed germinated.</p>
 
-</div>
-</div>
-<h3>References</h3>
-<div id="refs" class="references">
-<div id="ref-R-agricolae">
-<p>de Mendiburu, Felipe. 2016. <em>Agricolae: Statistical Procedures for Agricultural Research</em>. <a href="https://CRAN.R-project.org/package=agricolae" class="uri">https://CRAN.R-project.org/package=agricolae</a>.</p>
-</div>
-<div id="ref-R-ggplot2">
-<p>Wickham, Hadley, and Winston Chang. 2016. <em>Ggplot2: An Implementation of the Grammar of Graphics</em>. <a href="https://CRAN.R-project.org/package=ggplot2" class="uri">https://CRAN.R-project.org/package=ggplot2</a>.</p>
 </div>
 </div>
             </section>
@@ -215,20 +206,17 @@ gitbook.start({
 "all": ["facebook", "google", "twitter"]
 },
 "fontsettings": {
-"theme": "white",
+"theme": "sepia",
 "family": "sans",
 "size": 2
 },
 "edit": {
 "link": "https://github.com/Flavjack/GermBook/DataProcessing.Rmd",
-"text": "Edit",
-"fontsettings": null,
-"theme": "sepia",
-"family": "sans"
+"text": "Edit"
 },
 "download": ["germinaquant.pdf", "germinaquant.epub"],
 "toc": {
-"collapse": "subsection"
+"collapse": "section"
 }
 });
 });

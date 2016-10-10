@@ -1,10 +1,13 @@
 --- 
 title: "GerminaQuant"
+
 author: 
 
 - "Flavio Lozano Isla"
 - "Omar Benites Alfaro"
 - "Marcelo Francisco Pompelli"
+
+description: "A guide for analisis of germination variables and usage of GerminaQuant."
 
 date: "`r format(Sys.time(), '%d %B %Y')`"
 
@@ -18,7 +21,7 @@ link-citations: yes
 
 github-repo: "Flavjack/GermBook"
 cover-image: "img/germinaquant.png"
-description: "A guide for analisis of germination variables and usage of GerminaQuant."
+favicon: "img/favicon.ico"
 ---
 
 
