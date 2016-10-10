@@ -1,7 +1,10 @@
 name: germinaquant
+title: germinaquant
 account: flavjack
 server: bookdown.org
-appId: 153
-bundleId: 488
+appId: 246
+bundleId: 977
 url: https://bookdown.org/flavjack/germinaquant/
-when: 1468808482.7534
+when: 1476063487.69665
+asMultiple: FALSE
+asStatic: TRUE

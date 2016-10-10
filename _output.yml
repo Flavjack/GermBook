@@ -22,11 +22,3 @@ bookdown::gitbook:
       instapper: no
       vk: no
       all: ['facebook', 'google', 'twitter']
-bookdown::pdf_book:
-  includes:
-    in_header: preamble.tex
-  keep_tex: yes
-  latex_engine: pdflatex
-  citation_package: natbib
-bookdown::epub_book:
-  stylesheet: css/style.css
