@@ -1,16 +1,3 @@
-book_filename: "germinaquant"
-repo: "https://github.com/Flavjack/GermBook"
-output_dir: _book
-clean: [bookdown.bbl]
+output_dir: "docs"
 
 
-rmd_files: [
-            "index.Rmd",
-            "Germination.Rmd",
-            "Gindex.Rmd",
-            "Fieldbook.Rmd",
-            "Ganalysis.Rmd",
-            "DataProcessing.Rmd",
-            "Reference.Rmd"
-            ]
-            

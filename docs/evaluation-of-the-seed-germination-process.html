@@ -5,12 +5,12 @@
 
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>GerminaQuant</title>
+  <title>GerminaQuant for R</title>
   <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
   <meta name="description" content="A guide for analisis of germination variables and usage of GerminaQuant.">
-  <meta name="generator" content="bookdown 0.1 and GitBook 2.6.7">
+  <meta name="generator" content="bookdown 0.2 and GitBook 2.6.7">
 
-  <meta property="og:title" content="GerminaQuant" />
+  <meta property="og:title" content="GerminaQuant for R" />
   <meta property="og:type" content="book" />
   
   <meta property="og:image" content="img/germinaquant.png" />
@@ -18,7 +18,7 @@
   <meta name="github-repo" content="Flavjack/GermBook" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="GerminaQuant" />
+  <meta name="twitter:title" content="GerminaQuant for R" />
   
   <meta name="twitter:description" content="A guide for analisis of germination variables and usage of GerminaQuant." />
   <meta name="twitter:image" content="img/germinaquant.png" />
@@ -27,21 +27,16 @@
 <meta name="author" content="Omar Benites Alfaro">
 <meta name="author" content="Marcelo Francisco Pompelli">
 
-<meta name="date" content="2016-10-10">
 
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-  TeX: { equationNumbers: { autoNumber: "AMS" } }
-});
-</script>
+<meta name="date" content="2016-11-24">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-
-<link rel="next" href="evaluation-of-the-seed-germination-process.html">
+<link rel="prev" href="index.html">
+<link rel="next" href="germination-variables.html">
 
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -59,7 +54,7 @@ MathJax.Hub.Config({
 
 
 
-<link rel="stylesheet" href="css\style.css" type="text/css" />
+<link rel="stylesheet" href="style.css" type="text/css" />
 </head>
 
 <body>
@@ -110,7 +105,7 @@ MathJax.Hub.Config({
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">GerminaQuant</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">GerminaQuant for R</a>
           </h1>
         </div>
 
@@ -118,18 +113,9 @@ MathJax.Hub.Config({
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">GerminaQuant</h1>
-<h4 class="author"><em>Flavio Lozano Isla</em></h4>
-<h4 class="author"><em>Omar Benites Alfaro</em></h4>
-<h4 class="author"><em>Marcelo Francisco Pompelli</em></h4>
-<h4 class="date"><em>10 October 2016</em></h4>
-</div>
-<div id="introduction" class="section level1 unnumbered">
-<h1>Introduction</h1>
-<p><img src="img/germinaquant.png" width="50%" style="display: block; margin: auto;" /></p>
-<p><strong>GerminaQuant</strong> allows make the calculation of the germination variables incredibly easy in an interactive applications build in R <span class="citation">(R Core Team <a href="references.html#ref-R-base">2016</a>)</span>, based in GerminaR and Shiny <span class="citation">(Chang et al. <a href="references.html#ref-R-shiny">2016</a>)</span> package. GerminaQuant app is reactive!. Outputs change instantly as users modify inputs, without requiring a reload the app. The principal features of the application allow calculate the princiapal germination Variables, statistical analysis and easy way to plot the results.</p>
-<p><img src="img/ufpe.png" width="20%" style="display: block; margin: auto;" /><img src="img/ufrpe.png" width="20%" style="display: block; margin: auto;" /></p>
+<div id="evaluation-of-the-seed-germination-process" class="section level1">
+<h1><span class="header-section-number">1</span> Evaluation of the seed germination process</h1>
+<p>The physiology and seed technology have provided valuable tools for the production of high quality seed and treatments and storage conditions <span class="citation">(Marcos-Filho <a href="references.html#ref-Marcos-Filho1998">1998</a>)</span>. In basic research, the seeds are studied exhaustively, and the approach of its biology is performed to fully exploit the dormancy and germination <span class="citation">(Penfield and King <a href="references.html#ref-Penfield2009">2009</a>)</span>. An important tool for indicate the performance of a seed lot is the precise quantification of germination through accurate analysis of the cumulative germination data <span class="citation">(Joosen et al. <a href="references.html#ref-Joosen2010">2010</a>)</span>. Time, velocity, homogeneity, uncertainty and synchrony are measurements that inform the dynamics of the germination process. It is interesting not only for physiologists and seed technologists, but also for environmentalists, since it is possible to predict the degree of success of the species, based on the seed crop ability to redistribute germination over time, allowing the recruitment of part of the seedlings formed <span class="citation">(Ranal and Santana <a href="references.html#ref-Ranal2006">2006</a>)</span>.</p>
 
 </div>
             </section>
@@ -137,8 +123,8 @@ MathJax.Hub.Config({
           </div>
         </div>
       </div>
-
-<a href="evaluation-of-the-seed-germination-process.html" class="navigation navigation-next navigation-unique" aria-label="Next page""><i class="fa fa-angle-right"></i></a>
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="germination-variables.html" class="navigation navigation-next " aria-label="Next page""><i class="fa fa-angle-right"></i></a>
 
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/lunr.js"></script>
@@ -157,7 +143,7 @@ gitbook.start({
 "weibo": false,
 "instapper": false,
 "vk": false,
-"all": ["facebook", "google", "twitter"]
+"all": ["facebook", "google", "twitter", "weibo", "instapaper"]
 },
 "fontsettings": {
 "theme": "sepia",
@@ -165,10 +151,10 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/Flavjack/GermBook/index.Rmd",
+"link": "https://github.com/Flavjack/GermBook/blob/master/01-Germination.Rmd",
 "text": "Edit"
 },
-"download": ["germinaquant.pdf", "germinaquant.epub"],
+"download": null,
 "toc": {
 "collapse": "section"
 }
