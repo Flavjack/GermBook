@@ -7,28 +7,25 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>GerminaQuant for R</title>
   <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
-  <meta name="description" content="A guide for analisis of germination variables and usage of GerminaQuant.">
-  <meta name="generator" content="bookdown 0.2 and GitBook 2.6.7">
+  <meta name="description" content="A guide for analisis of germination variables and usage of GerminaQuant for R.">
+  <meta name="generator" content="bookdown 0.3 and GitBook 2.6.7">
 
   <meta property="og:title" content="GerminaQuant for R" />
   <meta property="og:type" content="book" />
   
   <meta property="og:image" content="img/germinaquant.png" />
-  <meta property="og:description" content="A guide for analisis of germination variables and usage of GerminaQuant." />
+  <meta property="og:description" content="A guide for analisis of germination variables and usage of GerminaQuant for R." />
   <meta name="github-repo" content="Flavjack/GermBook" />
 
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="GerminaQuant for R" />
   
-  <meta name="twitter:description" content="A guide for analisis of germination variables and usage of GerminaQuant." />
+  <meta name="twitter:description" content="A guide for analisis of germination variables and usage of GerminaQuant for R." />
   <meta name="twitter:image" content="img/germinaquant.png" />
 
-<meta name="author" content="Flavio Lozano Isla">
-<meta name="author" content="Omar Benites Alfaro">
-<meta name="author" content="Marcelo Francisco Pompelli">
+<meta name="author" content="Flavio Lozano-Isla, Omar Benites Alfaro, Denise Garcia de Santana, Marli A. Ranal, Marcelo Francisco Pompelli">
 
 
-<meta name="date" content="2016-11-24">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -86,11 +83,12 @@
 </ul></li>
 <li class="chapter" data-level="4" data-path="germination-analysis.html"><a href="germination-analysis.html"><i class="fa fa-check"></i><b>4</b> Germination analysis</a></li>
 <li class="chapter" data-level="5" data-path="germinaquant-data-processing.html"><a href="germinaquant-data-processing.html"><i class="fa fa-check"></i><b>5</b> GerminaQuant data processing</a><ul>
-<li class="chapter" data-level="5.1" data-path="germinaquant-data-processing.html"><a href="germinaquant-data-processing.html#field-book"><i class="fa fa-check"></i><b>5.1</b> Field Book</a></li>
-<li class="chapter" data-level="5.2" data-path="germinaquant-data-processing.html"><a href="germinaquant-data-processing.html#import-data"><i class="fa fa-check"></i><b>5.2</b> Import Data</a></li>
-<li class="chapter" data-level="5.3" data-path="germinaquant-data-processing.html"><a href="germinaquant-data-processing.html#indices-calculation"><i class="fa fa-check"></i><b>5.3</b> Indices calculation</a></li>
-<li class="chapter" data-level="5.4" data-path="germinaquant-data-processing.html"><a href="germinaquant-data-processing.html#statistical-analysis"><i class="fa fa-check"></i><b>5.4</b> Statistical analysis</a></li>
-<li class="chapter" data-level="5.5" data-path="germinaquant-data-processing.html"><a href="germinaquant-data-processing.html#germination-in-time"><i class="fa fa-check"></i><b>5.5</b> Germination in Time</a></li>
+<li class="chapter" data-level="5.1" data-path="germinaquant-data-processing.html"><a href="germinaquant-data-processing.html#prepare-you-field-book"><i class="fa fa-check"></i><b>5.1</b> Prepare you field book</a></li>
+<li class="chapter" data-level="5.2" data-path="germinaquant-data-processing.html"><a href="germinaquant-data-processing.html#fieldbook"><i class="fa fa-check"></i><b>5.2</b> Fieldbook</a></li>
+<li class="chapter" data-level="5.3" data-path="germinaquant-data-processing.html"><a href="germinaquant-data-processing.html#germination"><i class="fa fa-check"></i><b>5.3</b> Germination</a></li>
+<li class="chapter" data-level="5.4" data-path="germinaquant-data-processing.html"><a href="germinaquant-data-processing.html#statistical"><i class="fa fa-check"></i><b>5.4</b> Statistical</a></li>
+<li class="chapter" data-level="5.5" data-path="germinaquant-data-processing.html"><a href="germinaquant-data-processing.html#graphics"><i class="fa fa-check"></i><b>5.5</b> Graphics</a></li>
+<li class="chapter" data-level="5.6" data-path="germinaquant-data-processing.html"><a href="germinaquant-data-processing.html#intime"><i class="fa fa-check"></i><b>5.6</b> InTime</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
@@ -126,28 +124,44 @@
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">Introduction</td>
-<td align="left">Presentation of GerminaQuant and description of the germination variables</td>
+<td align="left">Presentation</td>
+<td align="left">Presentation of the aplication, principal characteristics and constributors</td>
 </tr>
 <tr class="even">
-<td align="left">Data Import</td>
-<td align="left">Allow to upload the fieldbook, visualize all the data and chose the parameter for the analysis .</td>
+<td align="left">User Manual</td>
+<td align="left">User manual explain the meaning of each indice and how to collect and process your data</td>
 </tr>
 <tr class="odd">
-<td align="left">Germination Analysis</td>
+<td align="left">Fieldbook</td>
+<td align="left">Interface to upload the field book and choose the parameter for the germination analisys, GerminaQuant allows to upload tha data from google sheet or excel file</td>
+</tr>
+<tr class="even">
+<td align="left">Germination</td>
 <td align="left">Calculate automatically the germination variables and export the data file.</td>
 </tr>
+<tr class="odd">
+<td align="left">Outliers</td>
+<td align="left">Interface to explore your data and the distribution of the data</td>
+</tr>
 <tr class="even">
-<td align="left">Statisdtical Analysis</td>
-<td align="left">Allow to chose the variables according the experimental design for analysis of variance and summarise the information</td>
+<td align="left">Regression</td>
+<td align="left">Allows to made the regression analisys for the variables used in the experiment</td>
 </tr>
 <tr class="odd">
-<td align="left">Multi Plot</td>
-<td align="left">Plot the mean comparison test for the variables selected in diffrente plots: bar, line and boxplot.</td>
+<td align="left">Statistics</td>
+<td align="left">Interface to choose the variables according the experimental design for analysis of variance and summarise the information according the principal mean comparison test</td>
 </tr>
 <tr class="even">
-<td align="left">Germination in Time</td>
-<td align="left">Selecting the treatment, allows plotting the germination process.</td>
+<td align="left">Graphics</td>
+<td align="left">Graphic the mean comparison test for the variables selected in the statistical analisys and plot the information in customized bar or line plot.</td>
+</tr>
+<tr class="odd">
+<td align="left">InTime</td>
+<td align="left">Selecting the factor from your experiment, allows plotting the germination process in time.</td>
+</tr>
+<tr class="even">
+<td align="left">Tools</td>
+<td align="left">Tool for calculte the osmotic potencial for any salt or PEG for germination experiments</td>
 </tr>
 </tbody>
 </table>
@@ -172,6 +186,7 @@
 require(["gitbook"], function(gitbook) {
 gitbook.start({
 "sharing": {
+"github": false,
 "facebook": false,
 "twitter": false,
 "google": false,

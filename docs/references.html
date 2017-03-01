@@ -7,28 +7,25 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>GerminaQuant for R</title>
   <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
-  <meta name="description" content="A guide for analisis of germination variables and usage of GerminaQuant.">
-  <meta name="generator" content="bookdown 0.2 and GitBook 2.6.7">
+  <meta name="description" content="A guide for analisis of germination variables and usage of GerminaQuant for R.">
+  <meta name="generator" content="bookdown 0.3 and GitBook 2.6.7">
 
   <meta property="og:title" content="GerminaQuant for R" />
   <meta property="og:type" content="book" />
   
   <meta property="og:image" content="img/germinaquant.png" />
-  <meta property="og:description" content="A guide for analisis of germination variables and usage of GerminaQuant." />
+  <meta property="og:description" content="A guide for analisis of germination variables and usage of GerminaQuant for R." />
   <meta name="github-repo" content="Flavjack/GermBook" />
 
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="GerminaQuant for R" />
   
-  <meta name="twitter:description" content="A guide for analisis of germination variables and usage of GerminaQuant." />
+  <meta name="twitter:description" content="A guide for analisis of germination variables and usage of GerminaQuant for R." />
   <meta name="twitter:image" content="img/germinaquant.png" />
 
-<meta name="author" content="Flavio Lozano Isla">
-<meta name="author" content="Omar Benites Alfaro">
-<meta name="author" content="Marcelo Francisco Pompelli">
+<meta name="author" content="Flavio Lozano-Isla, Omar Benites Alfaro, Denise Garcia de Santana, Marli A. Ranal, Marcelo Francisco Pompelli">
 
 
-<meta name="date" content="2016-11-24">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -86,11 +83,12 @@
 </ul></li>
 <li class="chapter" data-level="4" data-path="germination-analysis.html"><a href="germination-analysis.html"><i class="fa fa-check"></i><b>4</b> Germination analysis</a></li>
 <li class="chapter" data-level="5" data-path="germinaquant-data-processing.html"><a href="germinaquant-data-processing.html"><i class="fa fa-check"></i><b>5</b> GerminaQuant data processing</a><ul>
-<li class="chapter" data-level="5.1" data-path="germinaquant-data-processing.html"><a href="germinaquant-data-processing.html#field-book"><i class="fa fa-check"></i><b>5.1</b> Field Book</a></li>
-<li class="chapter" data-level="5.2" data-path="germinaquant-data-processing.html"><a href="germinaquant-data-processing.html#import-data"><i class="fa fa-check"></i><b>5.2</b> Import Data</a></li>
-<li class="chapter" data-level="5.3" data-path="germinaquant-data-processing.html"><a href="germinaquant-data-processing.html#indices-calculation"><i class="fa fa-check"></i><b>5.3</b> Indices calculation</a></li>
-<li class="chapter" data-level="5.4" data-path="germinaquant-data-processing.html"><a href="germinaquant-data-processing.html#statistical-analysis"><i class="fa fa-check"></i><b>5.4</b> Statistical analysis</a></li>
-<li class="chapter" data-level="5.5" data-path="germinaquant-data-processing.html"><a href="germinaquant-data-processing.html#germination-in-time"><i class="fa fa-check"></i><b>5.5</b> Germination in Time</a></li>
+<li class="chapter" data-level="5.1" data-path="germinaquant-data-processing.html"><a href="germinaquant-data-processing.html#prepare-you-field-book"><i class="fa fa-check"></i><b>5.1</b> Prepare you field book</a></li>
+<li class="chapter" data-level="5.2" data-path="germinaquant-data-processing.html"><a href="germinaquant-data-processing.html#fieldbook"><i class="fa fa-check"></i><b>5.2</b> Fieldbook</a></li>
+<li class="chapter" data-level="5.3" data-path="germinaquant-data-processing.html"><a href="germinaquant-data-processing.html#germination"><i class="fa fa-check"></i><b>5.3</b> Germination</a></li>
+<li class="chapter" data-level="5.4" data-path="germinaquant-data-processing.html"><a href="germinaquant-data-processing.html#statistical"><i class="fa fa-check"></i><b>5.4</b> Statistical</a></li>
+<li class="chapter" data-level="5.5" data-path="germinaquant-data-processing.html"><a href="germinaquant-data-processing.html#graphics"><i class="fa fa-check"></i><b>5.5</b> Graphics</a></li>
+<li class="chapter" data-level="5.6" data-path="germinaquant-data-processing.html"><a href="germinaquant-data-processing.html#intime"><i class="fa fa-check"></i><b>5.6</b> InTime</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
@@ -118,13 +116,10 @@
 
 <div id="refs" class="references">
 <div id="ref-R-shiny">
-<p>Chang, Winston, Joe Cheng, JJ Allaire, Yihui Xie, and Jonathan McPherson. 2016. <em>Shiny: Web Application Framework for R</em>. <a href="https://CRAN.R-project.org/package=shiny" class="uri">https://CRAN.R-project.org/package=shiny</a>.</p>
+<p>Chang, Winston, Joe Cheng, JJ Allaire, Yihui Xie, and Jonathan McPherson. 2017. <em>Shiny: Web Application Framework for R</em>. <a href="https://CRAN.R-project.org/package=shiny" class="uri">https://CRAN.R-project.org/package=shiny</a>.</p>
 </div>
 <div id="ref-Czabator1962">
 <p>Czabator, Felix J. 1962. “Germination value: an index combining speed and completeness of pine seed germination.” <em>Forest Science</em> 8 (4). Society of American Foresters: 386–96.</p>
-</div>
-<div id="ref-R-agricolae">
-<p>de Mendiburu, Felipe. 2016. <em>Agricolae: Statistical Procedures for Agricultural Research</em>. <a href="https://CRAN.R-project.org/package=agricolae" class="uri">https://CRAN.R-project.org/package=agricolae</a>.</p>
 </div>
 <div id="ref-Joosen2010">
 <p>Joosen, Ronny V. L., Jan Kodde, Leo A. J. Willems, Wilco Ligterink, Linus H. W. van der Plas, and Henk W.M. Hilhorst. 2010. “germinator : a software package for high-throughput scoring and curve fitting of Arabidopsis seed germination.” <em>The Plant Journal</em> 62 (1): 148–59. doi:<a href="https://doi.org/10.1111/j.1365-313X.2009.04116.x">10.1111/j.1365-313X.2009.04116.x</a>.</p>
@@ -153,9 +148,6 @@
 <div id="ref-Ranal2006">
 <p>Ranal, Marli A., and Denise Garcia de Santana. 2006. “How and why to measure the germination process?” <em>Revista Brasileira de Botânica</em> 29 (1). Sociedade Botânica de São Paulo: 1–11. doi:<a href="https://doi.org/10.1590/S0100-84042006000100002">10.1590/S0100-84042006000100002</a>.</p>
 </div>
-<div id="ref-R-ggplot2">
-<p>Wickham, Hadley, and Winston Chang. 2016. <em>Ggplot2: Create Elegant Data Visualisations Using the Grammar of Graphics</em>. <a href="https://CRAN.R-project.org/package=ggplot2" class="uri">https://CRAN.R-project.org/package=ggplot2</a>.</p>
-</div>
 </div>
 </div>
             </section>
@@ -177,6 +169,7 @@
 require(["gitbook"], function(gitbook) {
 gitbook.start({
 "sharing": {
+"github": false,
 "facebook": false,
 "twitter": false,
 "google": false,

@@ -7,28 +7,25 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>GerminaQuant for R</title>
   <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
-  <meta name="description" content="A guide for analisis of germination variables and usage of GerminaQuant.">
-  <meta name="generator" content="bookdown 0.2 and GitBook 2.6.7">
+  <meta name="description" content="A guide for analisis of germination variables and usage of GerminaQuant for R.">
+  <meta name="generator" content="bookdown 0.3 and GitBook 2.6.7">
 
   <meta property="og:title" content="GerminaQuant for R" />
   <meta property="og:type" content="book" />
   
   <meta property="og:image" content="img/germinaquant.png" />
-  <meta property="og:description" content="A guide for analisis of germination variables and usage of GerminaQuant." />
+  <meta property="og:description" content="A guide for analisis of germination variables and usage of GerminaQuant for R." />
   <meta name="github-repo" content="Flavjack/GermBook" />
 
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="GerminaQuant for R" />
   
-  <meta name="twitter:description" content="A guide for analisis of germination variables and usage of GerminaQuant." />
+  <meta name="twitter:description" content="A guide for analisis of germination variables and usage of GerminaQuant for R." />
   <meta name="twitter:image" content="img/germinaquant.png" />
 
-<meta name="author" content="Flavio Lozano Isla">
-<meta name="author" content="Omar Benites Alfaro">
-<meta name="author" content="Marcelo Francisco Pompelli">
+<meta name="author" content="Flavio Lozano-Isla, Omar Benites Alfaro, Denise Garcia de Santana, Marli A. Ranal, Marcelo Francisco Pompelli">
 
 
-<meta name="date" content="2016-11-24">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -86,11 +83,12 @@
 </ul></li>
 <li class="chapter" data-level="4" data-path="germination-analysis.html"><a href="germination-analysis.html"><i class="fa fa-check"></i><b>4</b> Germination analysis</a></li>
 <li class="chapter" data-level="5" data-path="germinaquant-data-processing.html"><a href="germinaquant-data-processing.html"><i class="fa fa-check"></i><b>5</b> GerminaQuant data processing</a><ul>
-<li class="chapter" data-level="5.1" data-path="germinaquant-data-processing.html"><a href="germinaquant-data-processing.html#field-book"><i class="fa fa-check"></i><b>5.1</b> Field Book</a></li>
-<li class="chapter" data-level="5.2" data-path="germinaquant-data-processing.html"><a href="germinaquant-data-processing.html#import-data"><i class="fa fa-check"></i><b>5.2</b> Import Data</a></li>
-<li class="chapter" data-level="5.3" data-path="germinaquant-data-processing.html"><a href="germinaquant-data-processing.html#indices-calculation"><i class="fa fa-check"></i><b>5.3</b> Indices calculation</a></li>
-<li class="chapter" data-level="5.4" data-path="germinaquant-data-processing.html"><a href="germinaquant-data-processing.html#statistical-analysis"><i class="fa fa-check"></i><b>5.4</b> Statistical analysis</a></li>
-<li class="chapter" data-level="5.5" data-path="germinaquant-data-processing.html"><a href="germinaquant-data-processing.html#germination-in-time"><i class="fa fa-check"></i><b>5.5</b> Germination in Time</a></li>
+<li class="chapter" data-level="5.1" data-path="germinaquant-data-processing.html"><a href="germinaquant-data-processing.html#prepare-you-field-book"><i class="fa fa-check"></i><b>5.1</b> Prepare you field book</a></li>
+<li class="chapter" data-level="5.2" data-path="germinaquant-data-processing.html"><a href="germinaquant-data-processing.html#fieldbook"><i class="fa fa-check"></i><b>5.2</b> Fieldbook</a></li>
+<li class="chapter" data-level="5.3" data-path="germinaquant-data-processing.html"><a href="germinaquant-data-processing.html#germination"><i class="fa fa-check"></i><b>5.3</b> Germination</a></li>
+<li class="chapter" data-level="5.4" data-path="germinaquant-data-processing.html"><a href="germinaquant-data-processing.html#statistical"><i class="fa fa-check"></i><b>5.4</b> Statistical</a></li>
+<li class="chapter" data-level="5.5" data-path="germinaquant-data-processing.html"><a href="germinaquant-data-processing.html#graphics"><i class="fa fa-check"></i><b>5.5</b> Graphics</a></li>
+<li class="chapter" data-level="5.6" data-path="germinaquant-data-processing.html"><a href="germinaquant-data-processing.html#intime"><i class="fa fa-check"></i><b>5.6</b> InTime</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
@@ -115,21 +113,21 @@
             <section class="normal" id="section-">
 <div id="germination-field-book" class="section level1">
 <h1><span class="header-section-number">3</span> Germination field book</h1>
-<p>For correct analysis and fast data processing is important to take into account that the data organization and the correct data collection of the germination process is essential. In this section, we going to explain how can you collect and organize your data.</p>
+<p>For correct analysis and fast data processing is important to take into account the data organization and the correct data collection of the germination process. In this section, we going to explain how can you collect and organize your data.</p>
 <p>For data example and layout, you can access and download GerminaQuant <a href="https://docs.google.com/spreadsheets/d/1QziIXGOwb8cl3GaARJq6Ez6aU7vND_UHKJnFcAKx0VI/edit#gid=667855537">spreadsheet</a>.</p>
 <div id="data-organization" class="section level2">
 <h2><span class="header-section-number">3.1</span> Data Organization</h2>
-<p>The field book should have three essential parts. The treatment column (red), according to the experimental design (1); the seed number column (green) (2), and the observation moment column (blue) (3). In the green column you will indicate the number of seeds sown in each experimental unit and in the blue columns the germination values (Figure <a href="germination-field-book.html#fig:dtorg">3.1</a>). You can design your own field book with different names in the column.</p>
+<p>The field book should have three essential parts.(1) The factor columns (red), according to the experimental design;(2) the seed number column, indicate the number of seeds sown in each experimental (green) and (3) the evaluation columns with the germination values (blue) (Figure <a href="germination-field-book.html#fig:dtorg">3.1</a>). You can design your own field book with different names in the column according your experimental design.</p>
 <div class="figure" style="text-align: center"><span id="fig:dtorg"></span>
-<img src="img/dtorg.png" alt="Layout for germination evaluation process. The factor column (red) are according the experimental design. The seed number column (green) for the number of seed sown and the evaluation columns (blue) are for accounting the germination." width="80%" />
+<img src="img/dtorg.png" alt="Layout for germination evaluation process. The factor column (red) are according the experimental design. The seed number column (green) for the number of seed sown and the evaluation columns (blue) for accounting the germination." width="80%" />
 <p class="caption">
-Figure 3.1: Layout for germination evaluation process. The factor column (red) are according the experimental design. The seed number column (green) for the number of seed sown and the evaluation columns (blue) are for accounting the germination.
+Figure 3.1: Layout for germination evaluation process. The factor column (red) are according the experimental design. The seed number column (green) for the number of seed sown and the evaluation columns (blue) for accounting the germination.
 </p>
 </div>
 </div>
 <div id="data-collection" class="section level2">
 <h2><span class="header-section-number">3.2</span> Data Collection</h2>
-<p>The evaluation of the germination process is obtained of the count of the germination in each experimental unit and It can be evaluated in time lapse of hours, days or months in continuous interval of the same length always beginning with the time zero (ei. Ti00), until the end of the germination process or according to the researcher criteria</p>
+<p>The evaluation of the germination process is obtained of the count of the germination in each experimental unit and It can be evaluated in time lapse of hours, days or months in continuous interval of the same length always beginning with the time zero (ei. Ti00), until the end of the germination process or according to the researcher criteria.</p>
 
 </div>
 </div>
@@ -152,6 +150,7 @@ Figure 3.1: Layout for germination evaluation process. The factor column (red) a
 require(["gitbook"], function(gitbook) {
 gitbook.start({
 "sharing": {
+"github": false,
 "facebook": false,
 "twitter": false,
 "google": false,

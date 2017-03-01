@@ -1,54 +1,51 @@
 # GerminaQuant data processing
 
-## Field Book
+## Prepare you field book
 
-For using the GerminaQuant is necessary that you have a data with germination values. You can use a following data [sample](https://docs.google.com/spreadsheets/d/1QziIXGOwb8cl3GaARJq6Ez6aU7vND_UHKJnFcAKx0VI/edit#gid=667855537). Open the link and download the data in csv format.
+For using the GerminaQuant is necessary that you have a data with germination values. You can use a following data as an example [data](https://docs.google.com/spreadsheets/d/1QziIXGOwb8cl3GaARJq6Ez6aU7vND_UHKJnFcAKx0VI/edit#gid=667855537). If you have a Google account you can clone the document and edit it online and download for your own analysis.
 
-Files >> Download >> Comma Separated Values (.csv, current sheet) >> "GerminaQuant - Sample.csv"
+## Fieldbook
 
-If you have a google account you can clone the document for you and edit it online and download for your own analysis.
+When you have your field book, you can go [GerminaQuant for R](https://flavjack.shinyapps.io/germinaquant/) and go "Fieldbook" tab. Figure \@ref(fig:impdt).
 
-## Import Data
-
-When you have your field book, you can go [GerminaQuant](https://flavjack.shinyapps.io/germinaquant/) and go "Data Import" tab. Figure \@ref(fig:impdt).
-
-```{r impdt, out.width='100%', fig.cap= "Data Import", fig.align='center', echo=FALSE, include=identical(knitr:::pandoc_to(), 'html')}
+```{r impdt, out.width='100%', fig.cap= "Fieldbook interface for import your data", fig.align='center', echo=FALSE, include=identical(knitr:::pandoc_to(), 'html')}
 knitr::include_graphics('img/impdt.png')
 ```
 
-Choose the file in "csv" format it will be analysed. In "Column with seeds number" you have to write the name of the column containing the information of the number of seed sown in each experimental unit, "Prefix of evaluation days" you have to put the prefix of the name called for the day for evaluate the germination time lapse. 
+You can paste a Google sheet URL or upload a local file in xlsx file format. In "Seeds (col name)" you have to write the name of the column containing the information of the number of seed sown in each experimental unit, for "Evaluations (prefix)" you have to put the prefix of the names for the evaluated days from the germination time lapse. 
 
-```{r csv, out.width='100%', fig.cap='Table option for csv format',fig.align='center', echo=FALSE, include=identical(knitr:::pandoc_to(), 'html')}
-knitr::include_graphics('img/csv.png')
-```
+## Germination
 
-Below of the parameter for evaluation, you will find the option to select the parameter for the "csv" format file. In such way the file should have a table form. Figure \@ref(fig:csv)
-
-
-## Indices calculation
-
-If the parameter in the "Import Data" tab are correct, in "Germination analysis" tab will be performed and the values of the germination variables for each experimental unit will be show. Table \@ref(tab:varsum). GerminaQuant app allows downloading the file in "csv" format with the calculation of the germination variables. Figure \@ref(fig:dwl)
+If the parameter in the "Fieldbook" tab are correct, in "Germination" tab will be performed and the values of the germination variables for each experimental unit will be show. Table \@ref(tab:varsum). GerminaQuant allows to copy or downloading the file in "csv" or "xlsx" format with the calculation of the germination variables. Figure \@ref(fig:dwl)
 
 ```{r dwl, out.width='100%',fig.cap='Dowload option for the calculated variables'  ,fig.align='center', echo=FALSE, include=identical(knitr:::pandoc_to(), 'html')}
 knitr::include_graphics('img/dtdown.png')
 ```
 
-## Statistical analysis
+## Statistical
 
-In this tab, the app perform a factorial variance analysis, calculate the statistical description of the factor, the mean differences through Student Newman Keuls [@R-agricolae] and made the graphics [@R-ggplot2] for the chosen variable.
+The application can perform a factorial analysis according you experimental design (crd, crbd or lsd), and calculate the analysis of variance and the mean differences through Student Newman Keuls, Tukey or Duncan test according the chosen variables.
 
 ```{r stat, out.width='100%', fig.cap="Statitical analysis with ANOVA and mean comparison test", fig.align='center', echo=FALSE, include=identical(knitr:::pandoc_to(), 'html')}
 knitr::include_graphics('img/stat.png')
 ```
 
-Remember, the independent variables will be the factor in your field book and the dependent variable will be any of the germination variables. Automatically the app will generate the graphs for the variable chosen and give the mean comparison test. The axis label can be edited manually filling the case in the "Graphics labels" section. The bar  and line graphs are represented by the mean and central line is the standard error.
+## Graphics
 
-## Germination in Time
+Automatically after performed the statistical analysis the application will generate the graphs for the variable chosen with the mean comparison test. The interface allows customized bar or line plot and export in "tiff" format with publication quality
 
-This Tab allows to visualize the germination process included in the field book. Figure \@ref(fig:gtime)
+
+```{r plot, out.width='100%', fig.cap="Customized interface for bar or line plot", fig.align='center', echo=FALSE, include=identical(knitr:::pandoc_to(), 'html')}
+knitr::include_graphics('img/plot.png')
+```
+
+
+## InTime
+
+This Tab allows to visualize the germination process according the experimental factors. The interface allows customized the graphic. Figure \@ref(fig:gtime)
 
 ```{r gtime, out.width='100%', fig.cap='Germination in time plot', fig.align='center', echo=FALSE, include=identical(knitr:::pandoc_to(), 'html')}
 knitr::include_graphics('img/gtime.png')
 ```
 
-The app give two graphics, the first is the germination in percentage in time lapse and the second the relative germination that calculate the germination according the total number of seed germinated.
+The application allows to plot two type of graphics, the first is the germination in percentage in time lapse and the second the relative germination that calculate the germination according the total number of seed germinated.

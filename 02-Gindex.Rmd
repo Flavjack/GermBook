@@ -61,10 +61,10 @@ $$Z=\frac{\sum_{ }^{ }C_{n_1,2}}{N} \\ \left(a\dim ensional\ measurement;\ expre
 
 var <- data.frame(
   
-  "variables" = c("germinated seed number", "germinability", "germination asin", "mean germination time", "germination speed", "mean germination rate", "Synchronyzation Index", "Uncertainty Index", "germination standard deviation", "germination variance", "Coefficient of variation"),
-  "abbreviation"= c("GSN", "GNP", "ASG", "MGT", "SPG", "MGR", "SYN", "UNC", "SDG", "VGT", "CVG"),
-  "limits" = c("\\(0 \\le n \\le n_i\\)", "\\(0 \\le g \\le 100\\)", "\\(0 \\le arsin \\le 1\\)", "\\(0 \\le t \\le k\\)", "\\(0 < g_s \\le 100\\)", "\\(0 < v \\le 1\\)", "\\(0 \\le Z \\le 1\\)", "\\(0 \\le U \\le log_2 n_i\\)", "\\(0 < s_t^2  \\le \\infty\\)", "\\(0 < s_t  \\le \\infty\\)", "\\(0 < CV_t  \\le \\infty\\)"),
-  "units" = c("\\(count\\)", "\\(\\%\\)", "\\(grade\\)", "\\(time\\)", "\\(\\%\\)", "\\(time^{-1}\\)", "\\(-\\)", "\\(bit\\)", "\\(time^2\\)", "\\(time\\)", "\\(\\%\\)")
+  "variables" = c("germinated seed number", "germinability", "mean germination time", "germination speed", "mean germination rate", "Synchronyzation Index", "Uncertainty Index", "germination standard deviation", "germination variance", "Coefficient of variation"),
+  "abbreviation"= c("GSN", "GNP", "MGT", "SPG", "MGR", "SYN", "UNC", "SDG", "VGT", "CVG"),
+  "limits" = c("\\(0 \\le n \\le n_i\\)", "\\(0 \\le g \\le 100\\)", "\\(0 \\le t \\le k\\)", "\\(0 < g_s \\le 100\\)", "\\(0 < v \\le 1\\)", "\\(0 \\le Z \\le 1\\)", "\\(0 \\le U \\le log_2 n_i\\)", "\\(0 < s_t^2  \\le \\infty\\)", "\\(0 < s_t  \\le \\infty\\)", "\\(0 < CV_t  \\le \\infty\\)"),
+  "units" = c("\\(count\\)", "\\(\\%\\)", "\\(time\\)", "\\(\\%\\)", "\\(time^{-1}\\)", "\\(-\\)", "\\(bit\\)", "\\(time^2\\)", "\\(time\\)", "\\(\\%\\)")
 )
 
 knitr::kable(
