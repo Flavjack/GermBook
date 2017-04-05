@@ -3,8 +3,8 @@ title: GerminaQuant for R user manual
 author: "Flavio Lozano-Isla, Omar Benites Alfaro, Denise Garcia de Santana, Marli A. Ranal, Marcelo Francisco Pompelli"
 description: A guide for analisis of germination variables and usage of GerminaQuant for R
 date: '`r Sys.Date()`'
-url: https\://flavjack.github.io/gbook/
-github-repo: flavjack/gbook
+url: https\://flavjack.github.io/GerminaQuant-usm/
+github-repo: flavjack/GerminaQuant-usm
 cover-image: img/cover.jpg
 favicon: img/favicon.ico
 site: bookdown::bookdown_site
