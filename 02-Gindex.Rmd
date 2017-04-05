@@ -30,7 +30,7 @@ In the same time unit of the mean germination time; expressed in the program as 
 
 The germination variance is expressed by:
 
-$$S_t^2=\left(\frac{\sum_{i=1}^kn_i\left(t_i-\overline{t}\right)^2}{\sum_{i=1}^kn_i-1}\right)$$
+$$S_t^2=\frac{\sum_{i=1}^kn_i\left(t_i-\overline{t}\right)^2}{\sum_{i=1}^kn_i-1}$$
 
 In the square time unit of the meangermination time; expressed in the program as VGT. **Where:** $t_i$: time from the start of the experiment to the $i^{th}$ observation (square time unit); $n_i$: number of germinated seeds in the $i^{th}$ time (not the accumulated number); $k$: the last time of observation and $\overline{t}$: mean germination time.
 
