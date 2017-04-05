@@ -5,27 +5,27 @@
 
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>GerminaQuant for R</title>
-  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
-  <meta name="description" content="A guide for analisis of germination variables and usage of GerminaQuant for R.">
-  <meta name="generator" content="bookdown 0.3 and GitBook 2.6.7">
+  <title>GerminaQuant for R user manual</title>
+  <meta name="description" content="A guide for analisis of germination variables and usage of GerminaQuant for R">
+  <meta name="generator" content="bookdown 0.3.14 and GitBook 2.6.7">
 
-  <meta property="og:title" content="GerminaQuant for R" />
+  <meta property="og:title" content="GerminaQuant for R user manual" />
   <meta property="og:type" content="book" />
-  
-  <meta property="og:image" content="img/germinaquant.png" />
-  <meta property="og:description" content="A guide for analisis of germination variables and usage of GerminaQuant for R." />
-  <meta name="github-repo" content="Flavjack/GermBook" />
+  <meta property="og:url" content="https://flavjack.github.io/gbook/" />
+  <meta property="og:image" content="https://flavjack.github.io/gbook/img/cover.jpg" />
+  <meta property="og:description" content="A guide for analisis of germination variables and usage of GerminaQuant for R" />
+  <meta name="github-repo" content="flavjack/gbook" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="GerminaQuant for R" />
+  <meta name="twitter:title" content="GerminaQuant for R user manual" />
   
-  <meta name="twitter:description" content="A guide for analisis of germination variables and usage of GerminaQuant for R." />
-  <meta name="twitter:image" content="img/germinaquant.png" />
+  <meta name="twitter:description" content="A guide for analisis of germination variables and usage of GerminaQuant for R" />
+  <meta name="twitter:image" content="https://flavjack.github.io/gbook/img/cover.jpg" />
 
 <meta name="author" content="Flavio Lozano-Isla, Omar Benites Alfaro, Denise Garcia de Santana, Marli A. Ranal, Marcelo Francisco Pompelli">
 
 
+<meta name="date" content="2017-04-05">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -34,7 +34,6 @@
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
 <link rel="prev" href="germination-field-book.html">
 <link rel="next" href="germinaquant-data-processing.html">
-
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -57,6 +56,7 @@
 <body>
 
 
+
   <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
 
     <div class="book-summary">
@@ -69,13 +69,15 @@
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Introduction</a></li>
 <li class="chapter" data-level="1" data-path="evaluation-of-the-seed-germination-process.html"><a href="evaluation-of-the-seed-germination-process.html"><i class="fa fa-check"></i><b>1</b> Evaluation of the seed germination process</a></li>
 <li class="chapter" data-level="2" data-path="germination-variables.html"><a href="germination-variables.html"><i class="fa fa-check"></i><b>2</b> Germination variables</a><ul>
-<li class="chapter" data-level="2.1" data-path="germination-variables.html"><a href="germination-variables.html#germinability-g"><i class="fa fa-check"></i><b>2.1</b> Germinability (G)</a></li>
-<li class="chapter" data-level="2.2" data-path="germination-variables.html"><a href="germination-variables.html#mean-germination-time-t-and-standard-deviation-st"><i class="fa fa-check"></i><b>2.2</b> Mean Germination Time (t) and Standard Deviation (S<sub>t</sub>)</a></li>
-<li class="chapter" data-level="2.3" data-path="germination-variables.html"><a href="germination-variables.html#coefficient-of-variation-of-the-germination-time"><i class="fa fa-check"></i><b>2.3</b> Coefficient of Variation of the Germination Time</a></li>
-<li class="chapter" data-level="2.4" data-path="germination-variables.html"><a href="germination-variables.html#mean-germination-rate-v"><i class="fa fa-check"></i><b>2.4</b> Mean Germination Rate (v)</a></li>
-<li class="chapter" data-level="2.5" data-path="germination-variables.html"><a href="germination-variables.html#uncertainty-index-u"><i class="fa fa-check"></i><b>2.5</b> Uncertainty Index (U)</a></li>
-<li class="chapter" data-level="2.6" data-path="germination-variables.html"><a href="germination-variables.html#synchronyzation-index-z"><i class="fa fa-check"></i><b>2.6</b> Synchronyzation Index (Z)</a></li>
-<li class="chapter" data-level="2.7" data-path="germination-variables.html"><a href="germination-variables.html#limits-and-units-of-the-germination-variables-in-germinaquant"><i class="fa fa-check"></i><b>2.7</b> Limits and units of the germination variables in GerminaQuant</a></li>
+<li class="chapter" data-level="2.1" data-path="germination-variables.html"><a href="germination-variables.html#germinability-g"><i class="fa fa-check"></i><b>2.1</b> Germinability (<span class="math inline">\(G\)</span>)</a></li>
+<li class="chapter" data-level="2.2" data-path="germination-variables.html"><a href="germination-variables.html#mean-germination-time-overlinet-and-standard-deviation-s_t"><i class="fa fa-check"></i><b>2.2</b> Mean Germination Time (<span class="math inline">\(\overline{t}\)</span>) and Standard Deviation (<span class="math inline">\(S_t\)</span>)</a></li>
+<li class="chapter" data-level="2.3" data-path="germination-variables.html"><a href="germination-variables.html#coefficient-of-variation-of-the-germination-time-cv_t."><i class="fa fa-check"></i><b>2.3</b> Coefficient of Variation of the Germination Time (<span class="math inline">\(CV_t\)</span>).</a></li>
+<li class="chapter" data-level="2.4" data-path="germination-variables.html"><a href="germination-variables.html#the-index-of-germination-variance-s_t2."><i class="fa fa-check"></i><b>2.4</b> The index of germination variance (<span class="math inline">\(S_t^2\)</span>).</a></li>
+<li class="chapter" data-level="2.5" data-path="germination-variables.html"><a href="germination-variables.html#mean-germination-rate-overlinev"><i class="fa fa-check"></i><b>2.5</b> Mean Germination Rate (<span class="math inline">\(\overline{v}\)</span>)</a></li>
+<li class="chapter" data-level="2.6" data-path="germination-variables.html"><a href="germination-variables.html#germination-speed-coefficient-g_s"><i class="fa fa-check"></i><b>2.6</b> Germination speed coefficient (<span class="math inline">\(G_s\)</span>)</a></li>
+<li class="chapter" data-level="2.7" data-path="germination-variables.html"><a href="germination-variables.html#uncertainty-index-u"><i class="fa fa-check"></i><b>2.7</b> Uncertainty Index (<span class="math inline">\(U\)</span>)</a></li>
+<li class="chapter" data-level="2.8" data-path="germination-variables.html"><a href="germination-variables.html#synchronyzation-index-z"><i class="fa fa-check"></i><b>2.8</b> Synchronyzation Index (<span class="math inline">\(Z\)</span>)</a></li>
+<li class="chapter" data-level="2.9" data-path="germination-variables.html"><a href="germination-variables.html#limits-and-units-of-the-germination-variables-in-germinaquant"><i class="fa fa-check"></i><b>2.9</b> Limits and units of the germination variables in GerminaQuant</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="germination-field-book.html"><a href="germination-field-book.html"><i class="fa fa-check"></i><b>3</b> Germination field book</a><ul>
 <li class="chapter" data-level="3.1" data-path="germination-field-book.html"><a href="germination-field-book.html#data-organization"><i class="fa fa-check"></i><b>3.1</b> Data Organization</a></li>
@@ -103,7 +105,7 @@
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">GerminaQuant for R</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">GerminaQuant for R user manual</a>
           </h1>
         </div>
 
@@ -173,8 +175,9 @@
         </div>
       </div>
 <a href="germination-field-book.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="germinaquant-data-processing.html" class="navigation navigation-next " aria-label="Next page""><i class="fa fa-angle-right"></i></a>
-
+<a href="germinaquant-data-processing.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
