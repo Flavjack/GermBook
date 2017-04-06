@@ -3,7 +3,7 @@
 After the data collection, the information can be processed using GerminaQuant App. The web application can be used in any device, connected to the internet, in an interactive way. The application is compound in tabs (Table \@ref(tab:tabs)) that allow to make the analysis very easy.
 
 
-```{r tabs, echo=FALSE}
+```{r tabs}
 tab <- data.frame( 
   
 "Tabs" = c(

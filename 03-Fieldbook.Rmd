@@ -11,7 +11,7 @@ For data example and layout, you can access and download GerminaQuant [spreadshe
 The field book should have three essential parts.(1) The factor columns (red), according to the experimental design;(2) the seed number column, indicate the number of seeds sown in each experimental unit (green) and (3) the evaluation columns with the germination values (blue) (Figure \@ref(fig:dtorg)). You can design your own field book with different names in the column according your experimental design.
 
 
-```{r dtorg, out.width='80%', fig.cap='Layout for germination evaluation process. The factor column (red) are according the experimental design. The seed number column (green) for the number of seed sown and the evaluation columns (blue) for accounting the germination.',fig.align='center', echo=FALSE, include=identical(knitr:::pandoc_to(), 'html')}
+```{r dtorg, fig.cap='Layout for germination evaluation process. The factor column (red) are according the experimental design. The seed number column (green) for the number of seed sown and the evaluation columns (blue) for accounting the germination.',fig.align='center', out.width='100%'}
 knitr::include_graphics('img/dtorg.png')
 ```
 

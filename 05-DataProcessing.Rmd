@@ -8,7 +8,6 @@ For using the GerminaQuant is necessary that you have a data with germination va
 
 When you have your field book, you can go [GerminaQuant for R](https://flavjack.shinyapps.io/germinaquant/) and go "Fieldbook" tab. Figure \@ref(fig:impdt).
 
-```{r impdt, out.width='100%', fig.cap= "Fieldbook interface for import your data", fig.align='center', echo=FALSE, include=identical(knitr:::pandoc_to(), 'html')}
 knitr::include_graphics('img/impdt.png')
 ```
 
@@ -18,7 +17,6 @@ You can paste a Google spread sheet URL or upload a local file in xlsx format. I
 
 If the parameter in the "Fieldbook" tab are correct, in "Germination" tab will be performed and the values of the germination indices for each experimental unit will be shown. Table \@ref(tab:varsum). GerminaQuant allows to copy or downloading the file in "csv" or "xlsx" format with the calculation of the germination variables. Figure \@ref(fig:dwl)
 
-```{r dwl, out.width='100%',fig.cap='Dowload option for the calculated variables'  ,fig.align='center', echo=FALSE, include=identical(knitr:::pandoc_to(), 'html')}
 knitr::include_graphics('img/dtdown.png')
 ```
 
@@ -26,7 +24,6 @@ knitr::include_graphics('img/dtdown.png')
 
 The application can perform a factorial analysis according you experimental design (crd, crbd or lsd), and calculate the analysis of variance and the mean differences through Student Newman Keuls, Tukey or Duncan test according the chosen variable.
 
-```{r stat, out.width='100%', fig.cap="Statitical analysis with ANOVA and mean comparison test", fig.align='center', echo=FALSE, include=identical(knitr:::pandoc_to(), 'html')}
 knitr::include_graphics('img/stat.png')
 ```
 
@@ -35,7 +32,6 @@ knitr::include_graphics('img/stat.png')
 Automatically after performed the statistical analysis the application will generate the graphs for the variable chosen with the mean comparison test. The interface allows customized bar or line plot and export in "tiff" format for publication quality.
 
 
-```{r plot, out.width='100%', fig.cap="Customized interface for bar or line plot", fig.align='center', echo=FALSE, include=identical(knitr:::pandoc_to(), 'html')}
 knitr::include_graphics('img/plot.png')
 ```
 
@@ -44,7 +40,6 @@ knitr::include_graphics('img/plot.png')
 
 This Tab allows to visualize the germination process according the experimental factors. The interface allows customized the graphic. Figure \@ref(fig:gtime)
 
-```{r gtime, out.width='100%', fig.cap='Germination in time plot', fig.align='center', echo=FALSE, include=identical(knitr:::pandoc_to(), 'html')}
 knitr::include_graphics('img/gtime.png')
 ```
 

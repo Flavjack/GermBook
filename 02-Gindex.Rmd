@@ -79,7 +79,7 @@ Adimensional measurement; expressed in the program as SYN. **Where:** $C_{n_i,2}
 
 ## Limits and units of the germination variables in GerminaQuant
 
-```{r varsum, echo=FALSE}
+```{r varsum}
 
 var <- data.frame(
   
