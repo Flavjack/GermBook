@@ -86,7 +86,7 @@
 <li class="chapter" data-level="4" data-path="germination-analysis.html"><a href="germination-analysis.html"><i class="fa fa-check"></i><b>4</b> Germination analysis</a></li>
 <li class="chapter" data-level="5" data-path="germinaquant-data-processing.html"><a href="germinaquant-data-processing.html"><i class="fa fa-check"></i><b>5</b> GerminaQuant data processing</a><ul>
 <li class="chapter" data-level="5.1" data-path="germinaquant-data-processing.html"><a href="germinaquant-data-processing.html#prepare-you-field-book"><i class="fa fa-check"></i><b>5.1</b> Prepare you field book</a></li>
-<li class="chapter" data-level="5.2" data-path="germinaquant-data-processing.html"><a href="germinaquant-data-processing.html#fieldbook"><i class="fa fa-check"></i><b>5.2</b> Fieldbook</a></li>
+<li class="chapter" data-level="5.2" data-path="germinaquant-data-processing.html"><a href="germinaquant-data-processing.html#field-book"><i class="fa fa-check"></i><b>5.2</b> Field book</a></li>
 <li class="chapter" data-level="5.3" data-path="germinaquant-data-processing.html"><a href="germinaquant-data-processing.html#germination"><i class="fa fa-check"></i><b>5.3</b> Germination</a></li>
 <li class="chapter" data-level="5.4" data-path="germinaquant-data-processing.html"><a href="germinaquant-data-processing.html#statistical"><i class="fa fa-check"></i><b>5.4</b> Statistical</a></li>
 <li class="chapter" data-level="5.5" data-path="germinaquant-data-processing.html"><a href="germinaquant-data-processing.html#graphics"><i class="fa fa-check"></i><b>5.5</b> Graphics</a></li>
@@ -119,8 +119,8 @@
 <h2><span class="header-section-number">5.1</span> Prepare you field book</h2>
 <p>For using the GerminaQuant is necessary that you have a data with germination values. You can use a following data as an example <a href="https://docs.google.com/spreadsheets/d/1QziIXGOwb8cl3GaARJq6Ez6aU7vND_UHKJnFcAKx0VI/edit#gid=667855537">data</a>. If you have a Google account you can clone the document and edit it online and download for your own analysis.</p>
 </div>
-<div id="fieldbook" class="section level2">
-<h2><span class="header-section-number">5.2</span> Fieldbook</h2>
+<div id="field-book" class="section level2">
+<h2><span class="header-section-number">5.2</span> Field book</h2>
 <p>When you have your field book, you can go <a href="https://flavjack.shinyapps.io/germinaquant/">GerminaQuant for R</a> and go “Fieldbook” tab. Figure <a href="germinaquant-data-processing.html#fig:impdt">5.1</a>.</p>
 <div class="figure" style="text-align: center"><span id="fig:impdt"></span>
 <img src="img/impdt.png" alt="Fieldbook interface for import your data" width="100%" />
@@ -128,11 +128,11 @@
 Figure 5.1: Fieldbook interface for import your data
 </p>
 </div>
-<p>You can paste a Google sheet URL or upload a local file in xlsx file format. In “Seeds (col name)” you have to write the name of the column containing the information of the number of seed sown in each experimental unit, for “Evaluations (prefix)” you have to put the prefix of the names for the evaluated days from the germination time lapse.</p>
+<p>You can paste a Google spread sheet URL or upload a local file in xlsx format. In “Seeds (col name)” you have to write the name of the column containing the information of the number of seed sown in each experimental unit, for “Evaluations (prefix)” you have to put the prefix of the names for the evaluated days from the germination time lapse.</p>
 </div>
 <div id="germination" class="section level2">
 <h2><span class="header-section-number">5.3</span> Germination</h2>
-<p>If the parameter in the “Fieldbook” tab are correct, in “Germination” tab will be performed and the values of the germination variables for each experimental unit will be show. Table <a href="germination-variables.html#tab:varsum">2.1</a>. GerminaQuant allows to copy or downloading the file in “csv” or “xlsx” format with the calculation of the germination variables. Figure <a href="germinaquant-data-processing.html#fig:dwl">5.2</a></p>
+<p>If the parameter in the “Fieldbook” tab are correct, in “Germination” tab will be performed and the values of the germination indices for each experimental unit will be shown. Table <a href="germination-variables.html#tab:varsum">2.1</a>. GerminaQuant allows to copy or downloading the file in “csv” or “xlsx” format with the calculation of the germination variables. Figure <a href="germinaquant-data-processing.html#fig:dwl">5.2</a></p>
 <div class="figure" style="text-align: center"><span id="fig:dwl"></span>
 <img src="img/dtdown.png" alt="Dowload option for the calculated variables" width="100%" />
 <p class="caption">
@@ -142,7 +142,7 @@ Figure 5.2: Dowload option for the calculated variables
 </div>
 <div id="statistical" class="section level2">
 <h2><span class="header-section-number">5.4</span> Statistical</h2>
-<p>The application can perform a factorial analysis according you experimental design (crd, crbd or lsd), and calculate the analysis of variance and the mean differences through Student Newman Keuls, Tukey or Duncan test according the chosen variables.</p>
+<p>The application can perform a factorial analysis according you experimental design (crd, crbd or lsd), and calculate the analysis of variance and the mean differences through Student Newman Keuls, Tukey or Duncan test according the chosen variable.</p>
 <div class="figure" style="text-align: center"><span id="fig:stat"></span>
 <img src="img/stat.png" alt="Statitical analysis with ANOVA and mean comparison test" width="100%" />
 <p class="caption">
@@ -152,7 +152,7 @@ Figure 5.3: Statitical analysis with ANOVA and mean comparison test
 </div>
 <div id="graphics" class="section level2">
 <h2><span class="header-section-number">5.5</span> Graphics</h2>
-<p>Automatically after performed the statistical analysis the application will generate the graphs for the variable chosen with the mean comparison test. The interface allows customized bar or line plot and export in “tiff” format with publication quality</p>
+<p>Automatically after performed the statistical analysis the application will generate the graphs for the variable chosen with the mean comparison test. The interface allows customized bar or line plot and export in “tiff” format for publication quality.</p>
 <div class="figure" style="text-align: center"><span id="fig:plot"></span>
 <img src="img/plot.png" alt="Customized interface for bar or line plot" width="100%" />
 <p class="caption">
@@ -169,7 +169,7 @@ Figure 5.4: Customized interface for bar or line plot
 Figure 5.5: Germination in time plot
 </p>
 </div>
-<p>The application allows to plot two type of graphics, the first is the germination in percentage in time lapse and the second the relative germination that calculate the germination according the total number of seed germinated.</p>
+<p>The application allows to plot two type of graphics, the first is the germination in percentage in time lapse and the second the relative germination that calculate the germination according the total number of germinated seeds.</p>
 
 </div>
 </div>

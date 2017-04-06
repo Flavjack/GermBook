@@ -1,6 +1,6 @@
 # Germination field book
 
-For correct analysis and fast data processing is important to take into account the data organization and the correct data collection of the germination process. In this section, we going to explain how can you collect and organize your data.
+For correct analysis and fast data processing is important to take into account the data organization and the correct data collection of the germination process. In this section, we are going to explain how can you collect and organize your data.
 
 For data example and layout, you can access and download GerminaQuant [spreadsheet](https://docs.google.com/spreadsheets/d/1QziIXGOwb8cl3GaARJq6Ez6aU7vND_UHKJnFcAKx0VI/edit#gid=667855537).
 
@@ -8,7 +8,7 @@ For data example and layout, you can access and download GerminaQuant [spreadshe
 ## Data Organization
 
 
-The field book should have three essential parts.(1) The factor columns (red), according to the experimental design;(2) the seed number column, indicate the number of seeds sown in each experimental (green) and (3) the evaluation columns with the germination values (blue) (Figure \@ref(fig:dtorg)). You can design your own field book with different names in the column according your experimental design.
+The field book should have three essential parts.(1) The factor columns (red), according to the experimental design;(2) the seed number column, indicate the number of seeds sown in each experimental unit (green) and (3) the evaluation columns with the germination values (blue) (Figure \@ref(fig:dtorg)). You can design your own field book with different names in the column according your experimental design.
 
 
 ```{r dtorg, out.width='80%', fig.cap='Layout for germination evaluation process. The factor column (red) are according the experimental design. The seed number column (green) for the number of seed sown and the evaluation columns (blue) for accounting the germination.',fig.align='center', echo=FALSE, include=identical(knitr:::pandoc_to(), 'html')}
