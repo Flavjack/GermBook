@@ -1,4 +1,14 @@
 book_filename: "GerminaQuant-usm"
 output_dir: "docs"
+rmd_files: [
+  "index.Rmd",
+  "germination.Rmd", 
+  "gindex.Rmd",
+  "fieldbook.Rmd",
+  "ganalysis.Rmd",
+  "dapro.Rmd",
+  "code.Rmd",
+  "reference.Rmd"
+  ]
 
 

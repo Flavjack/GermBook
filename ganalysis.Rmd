@@ -1,0 +1,41 @@
+# Germination analysis
+
+After the data collection, the information can be processed using GerminaQuant App. The web application can be used in any device, connected to the internet, in an interactive way. The application is compound in tabs (Table \@ref(tab:tabs)) that allow to make the analysis very easy.
+
+
+```{r tabs}
+tab <- data.frame( 
+  
+"Tabs" = c(
+  "Presentation",
+  "User Manual",
+  "Fieldbook", 
+  "Germination", 
+  "Boxplot",
+  #"Regression",
+  "Statistics", 
+  "Graphics",
+  "InTime",
+  "Tools"), 
+
+"Description" = c(
+  'Presentation of the aplication, principal characteristics and constributors',
+  "User manual explain the meaning of each indice and how to collect and process your data",
+  "Interface to upload the field book and choose the parameter for the germination analisys, GerminaQuant allows to upload tha data from google sheet or excel file",
+  "Calculate automatically the germination variables and export the data file.",
+  "Interface to explore your data and their distribution",
+  #"Allows to made the regression analisys for the variables used in the experiment",
+  "Interface to choose the variables according the experimental design for analysis of variance and summarise the information according the principal mean comparison test",
+  "Graphic the mean comparison test for the variables selected in the statistical analisys and plot the information in customized bar or line plot.", 
+  "Selecting the factor from your experiment, allows plotting the germination process in time.",
+  "Tool for calculte the osmotic potencial for any salt or PEG for germination experiments")
+)
+
+knitr::kable(
+  tab, 
+  booktabs = TRUE,
+  caption = 'Name and description of each tab of GerminaQuant to evaluate and analyze the germination process'
+  )
+```
+
+
