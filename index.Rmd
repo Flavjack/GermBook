@@ -3,21 +3,24 @@ title: GerminaQuant for R user manual
 author: "Flavio Lozano-Isla, Omar Benites Alfaro, Denise Garcia de Santana, Marli A. Ranal, Marcelo Francisco Pompelli"
 description: A guide for analisis of germination variables and usage of GerminaQuant for R
 date: '`r Sys.Date()`'
-url: https\://flavjack.github.io/GerminaQuant-usm/
 github-repo: flavjack/GerminaQuant-usm
 cover-image: img/cover.jpg
 favicon: img/favicon.ico
+url: https\://www.lozanoisla.com
 site: bookdown::bookdown_site
 documentclass: book
 bookdown::gitbook:
-output: word_document
+output:
+  bookdown::word_document2:
+    reference_docx: style_2.docx
 link-citations: yes
 colorlinks: yes
 bibliography: 
 - book.bib
-- packages.bib
+- pkgs.bib
 csl: apa.csl
-# https://www.zotero.org/styles
+editor_options: 
+  chunk_output_type: console
 ---
 
 ```{r setup, include=FALSE}
@@ -38,20 +41,37 @@ library(png)
 library(jpeg)
 library(DT)
 library(citr)
+
 ```
 
 # Introduction {-}
 
 
-```{r icon, out.width='30%', fig.align='center',include=identical(knitr:::pandoc_to(), 'html')}
-knitr::include_graphics('img/germinaquant.png')
-```
+```{r icon, out.width='35%', fig.align='center'}
 
+knitr::include_graphics('img/germinaquant.png')
+
+```
 
 **GerminaQuant for R** allows make the calculation of the germination variables incredibly easy in an interactive applications build in R [@R-base], based in GerminaR and Shiny R package [@R-shiny] . GerminaQuant app is reactive!. Outputs change instantly as users modify inputs. The principal features of the application allows to calculate the princiapal germination Variables, statistical analysis and easy way to plot the results.
 
-```{r univ, out.width='15%', fig.align='center', include=identical(knitr:::pandoc_to(), 'html')}
-knitr::include_graphics('img/ufpe.png')
-knitr::include_graphics('img/ufrpe.png')
+```{r univ, fig.align='center', out.width='50%'}
+
+fg1 <- png::readPNG("img/ufpe.png") %>% 
+  grid::rasterGrob(interpolate = TRUE)
+
+fg2 <- png::readPNG("img/ufrpe.png") %>% 
+  grid::rasterGrob(interpolate = TRUE)
+
+plot <- cowplot::ggdraw(xlim = c(0, 0.8), ylim = c(0, 0.45))+
+  draw_plot(fg1, width = 0.4, height = 0.38, x = 0.0, y = 0.03) +
+  draw_plot(fg2, width = 0.4, height = 0.4, x = 0.4, y = 0.01) 
+
+
+cowplot::ggsave("img/unv.png", dpi= 300, width = 210*0.8 , height = 210*0.4, units = "mm")
+
+include_graphics("img/unv.png")
+
+
 ```
 
