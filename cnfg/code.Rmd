@@ -1,0 +1,127 @@
+# GerminaR: data analysis with code 
+
+The data analysis for the germination experiment can follow a routine. The functions will de explain according to the data set included in the GerminaR package ("*prosopis*"). 
+
+1. Activated the GerminaR package and load the "*prosopis*" data set on the session. In case of using another data set, the user can load their own data and proceed according to the script below:
+
+```{r, echo=TRUE}
+# Activate packages
+library(GerminaR)
+library(tidyverse)
+
+# load data
+fb <- prosopis %>% 
+  dplyr::mutate(nacl = as.factor(nacl), temp = as.factor(temp), rep = as.factor(rep))
+
+# Prosopis data set
+fb %>% web_table(title = "Prosopis data set loaded")
+```
+
+2. Calculate the germination variables and perform the ANOVA and the mean comparison tests. The user can generate the graphs, expressing their results, which can be either of bars or lines graphics.
+
+```{r, echo=TRUE}
+
+# germination analysis (ten variables)
+gsm <- ger_summary(SeedN = "seeds", evalName = "D", data = fb)
+
+# Prosopis data set processed
+
+gsm %>% web_table(title = "Function *ger_summary* performe ten germination variables")
+
+```
+
+## Punctual analysis of germination
+
+### Germination percentage
+
+```{r, echo=TRUE, fig.cap="Germination  experiment with *Prosopis juliflor* under different osmotic potentials and temperatures. Bar graph with germination percentage in a factorial analisys"}
+
+## Germination Percentage (GRP)
+# analisys of variance
+av <- aov(formula = GRP ~ nacl*temp + rep, data = gsm)
+# mean comparision test
+mc_grp <- ger_testcomp(aov = av, comp = c("temp", "nacl"), type = "snk")
+# data result
+mc_grp %>% web_table(title =  "Germination percentage mean comparision")
+# bar graphics for germination percentage
+grp <- fplot(data = mc_grp, type = "bar", 
+             x = "temp", y = "mean", z = "nacl", 
+             lmt = c(0,110), brk = 10,
+             ylab = "Germination ('%')", 
+             xlab = "Temperature (ºC)", 
+             lgl = "NaCl (MPa)", lgd = "top", 
+             erb = T, color = F)
+
+grp
+
+
+```
+
+### Mean germination time
+
+```{r, echo=TRUE, fig.cap="Germination  experiment with *Prosopis juliflor* under different osmotic potentials and temperatures. Bar graph for mean germination time in a factorial analisys."}
+
+## Mean Germination Time (MGT)
+# analisys of variance
+av <- aov(formula = MGT ~ nacl*temp + rep, data = gsm)
+# mean comparision test
+mc_mgt <- ger_testcomp(aov = av, comp = c("temp", "nacl"), type = "snk")
+# data result
+mc_mgt %>% web_table(title = "Mean germination time comparison")
+# bar graphics for mean germination time
+mgt <- fplot(data = mc_mgt, type = "bar", 
+             x = "temp", y = "mean", z = "nacl", 
+             lmt = c(0,9), brk = 1,
+             ylab = "Mean germination time (days)", 
+             xlab = "Temperature (ºC)", 
+             lgl = "NaCl (MPa)", lgd = "top", 
+             erb = T, color = F)
+
+mgt
+
+```
+
+> Graphics have the possibility of adding different parameters as the standard error, significance of the mean test, color, labels and limits. The graphics result are performed for publications and allows to insert math expression in the titles.
+
+## Cumulative analysis of germination
+
+The cumulative analysis of the germination allows to observe the evolution of the germination process, being able to be expressed as the percentage of germination or with the relative germination. 
+
+### In time analysis for NaCl 
+
+```{r, echo=TRUE, fig.cap="Germination  experiment with *Prosopis juliflor* under different osmotic potentials and temperatures. Line graph from cumulative germination under different osmotic potentials."}
+
+# data frame with percentual or relative germination in time by NaCl
+git <- ger_intime(Factor = "nacl", SeedN = "seeds", evalName = "D", method = "percentage", data = fb)
+
+# graphic germination in time by NaCl
+nacl <- fplot(data = git, type = "line", 
+             x = "evaluation", y = "mean", z = "nacl", 
+             lmt = c(0,110), brk = 10,
+             ylab = "Germination ('%')", 
+             xlab = "Day", 
+             lgl = "NaCl (MPa)", 
+             lgd = "top", color = FALSE)
+nacl
+
+
+```
+
+### In time analysis for temperature 
+
+```{r, echo=TRUE, fig.cap="Germination  experiment with *Prosopis juliflor* under different osmotic potentials and temperatures. Line graph from cumulative germination under different temperatures."}
+
+# data frame with percentual or relative germination in time by temperature
+git <- ger_intime(Factor = "temp", SeedN = "seeds", evalName = "D", method = "percentage", data = fb)
+
+# graphic germination in time by temperature
+temp <- fplot(data = git, type = "line", 
+             x = "evaluation", y = "mean", z = "temp", 
+             lmt = c(0,110), brk = 10,
+             ylab = "Germination ('%')", 
+             xlab = "Day", 
+             lgl = "Temperature ('°C')", 
+             lgd = "top", color = FALSE)
+temp
+```
+

@@ -1,5 +1,5 @@
 bookdown::gitbook:
-  css: style.css
+  css: cnfg/style.css
   split_by: chapter # chapter none
   split_bib: FALSE
   config:
@@ -9,14 +9,19 @@ bookdown::gitbook:
       before: |
         <li> <a href="http://www.lozanoisla.com" target="blank"> Flavio Lozano Isla </a> </li>
       after:  |
-        <li> <a href="http://www.quipo.org" target="blank"> QUIPO.ORG </a> </li>
+        <li> <a href="https://flavjack.shinyapps.io/germinaquant/" target="blank"> GerminaQuant </a> </li>
     fontsettings:
-      theme: sepia
+      theme: white
       family: sans
       size: 2
     search: yes
-    edit: https://github.com/Flavjack/GerminaQuant-usm/blob/master/%s
-    download: ["docx"]
+    info: no
+#    edit:
+#      link: https://github.com/Flavjack/GerminaQuant-usm/blob/master/%s
+#      text: "Edit"
+    download: 
+#      - ["rticles.docx", "word"]
+      - ["files.zip", "files"]
     sharing:
       github: yes
       twitter: no
