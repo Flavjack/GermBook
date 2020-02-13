@@ -5,13 +5,30 @@ The data analysis for the germination experiment can follow a routine. The funct
 1. Activated the GerminaR package and load the "*prosopis*" data set on the session. In case of using another data set, the user can load their own data and proceed according to the script below:
 
 ```{r, echo=TRUE}
-# Activate packages
-library(GerminaR)
-library(tidyverse)
+# Install packages and dependencies
+packages <- c(
+   "devtools", # For install packages and complements from dev sources
+   "knitr", # Base of the bookdown template
+   "kableExtra", # Table notes!
+   "tidyverse", # Data manipulation
+   "googlesheets4", # Read/write google sheets files
+   "agricolae", # Agriculture data analisys
+   "GerminaR", # Germination analisys and line and bar easy plots
+   "cowplot", # For export and mergue figures 
+   "GerminaR"
+)
+
+installed_packages <- packages %in% rownames(installed.packages())
+if (any(installed_packages == FALSE)) {
+   devtools::install_github("Flavjack/GerminaR", force = T)
+   install.packages(packages[!installed_packages])
+}
+invisible(lapply(packages, library, character.only = TRUE))
+rm(packages, installed_packages)
 
 # load data
 fb <- prosopis %>% 
-  dplyr::mutate(nacl = as.factor(nacl), temp = as.factor(temp), rep = as.factor(rep))
+  dplyr::mutate_at(vars(nacl, temp, rep), as.factor)
 
 # Prosopis data set
 fb %>% web_table(title = "Prosopis data set loaded")
