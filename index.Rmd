@@ -1,6 +1,12 @@
 --- 
 title: GerminaQuant for R user manual 
-author: "Flavio Lozano-Isla, Omar Benites Alfaro, Denise Garcia de Santana, Marli A. Ranal, Marcelo Francisco Pompelli"
+author: 
+  - "Flavio Lozano-Isla $^{1}$, Omar Benites Alfaro $^{2}$, Denise Garcia de Santana $^{3}$, Marli A. Ranal $^{4}$, Marcelo Francisco Pompelli $^{5}$"
+  - "$^{1}$ Universidade Federal Rural de Pernambuco, Brazil. email: flavjack@gmail.com"
+  - "$^{2}$ Centro Internacional de la Papa (CIP), Peru. email: obacc07@gmail.com"
+  - "$^{3}$ Universidade Federal de Uberlandia, Brazil. email: denise.santana@ufu.br"
+  - "$^{4}$ Universidade Federal de Uberlandia, Brazil. email: ranal@ufu.br"
+  - "$^{5}$ Universidade Federal de Pernambuco, Brazil. email: mpompelli@gmail.com"
 description: A guide for analisis of germination variables and usage of GerminaQuant for R
 date: '`r Sys.Date()`'
 github-repo: flavjack/GerminaQuant-usm/issues
@@ -103,7 +109,7 @@ You can paste a Google spread sheet URL or upload a local file in xlsx format. I
 
 ## Germination
 
-If the parameter in the "Fieldbook" tab are correct, in "Germination" tab will be performed and the values of the germination indices for each experimental unit will be shown. Table \@ref(tab:varsum). GerminaQuant allows to copy or downloading the file in "csv" or "xlsx" format with the calculation of the germination variables. Figure \@ref(fig:dwl)
+If the parameter in the "Fieldbook" tab are correct, in "Germination" tab will be performed and the values of the germination indices for each experimental unit will be shown. GerminaQuant allows to copy or downloading the file in "csv" or "xlsx" format with the calculation of the germination variables. Figure \@ref(fig:dwl)
 
 ```{r dwl, fig.cap='Dowload option for the calculated variables', fig.align='center',out.width='100%'}
 knitr::include_graphics('files/dtdown.png')
