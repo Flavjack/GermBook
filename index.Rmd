@@ -1,5 +1,5 @@
 --- 
-title: GerminaQuant for R user manual 
+title: "GerminaR and GerminaQuant .: user manual" 
 author: 
   - "Flavio Lozano-Isla $^{1}$, Omar Benites Alfaro $^{2}$, Denise Garcia de Santana $^{3}$, Marli A. Ranal $^{4}$, Marcelo Francisco Pompelli $^{5}$"
   - "$^{1}$ Universidade Federal Rural de Pernambuco, Brazil. email: flavjack@gmail.com"
@@ -7,7 +7,7 @@ author:
   - "$^{3}$ Universidade Federal de Uberlandia, Brazil. email: denise.santana@ufu.br"
   - "$^{4}$ Universidade Federal de Uberlandia, Brazil. email: ranal@ufu.br"
   - "$^{5}$ Universidade Federal de Pernambuco, Brazil. email: mpompelli@gmail.com"
-description: A guide for analisis of germination variables and usage of GerminaQuant for R
+description: "GerminaR R package + GerminaQuant app .: user manual"
 date: '`r Sys.Date()`'
 github-repo: flavjack/GerminaQuant-usm/issues
 cover-image: files/cover.jpg
@@ -41,7 +41,7 @@ include_graphics('files/icon.png')
 
 ## Citation {-}
 
-Lozano-Isla, F., Benites-Alfaro, O. E., & Pompelli, M. F. (2019). GerminaR: An R package for germination analysis with the interactive web application “GerminaQuant for R.” Ecological Research, 34(2), 339–346. <https://doi.org/10.1111/1440-1703.1275>
+Lozano-Isla, Flavio; Benites-Alfaro, Omar Eduardo; Pompelli, Marcelo Francisco (2019). GerminaR: An R package for germination analysis with the interactive web application “GerminaQuant for R.” Ecological Research, 34(2), 339–346. <https://doi.org/10.1111/1440-1703.1275>
 
 ## GerminaR CRAN {-}
 
@@ -49,7 +49,7 @@ Lozano-Isla, F., Benites-Alfaro, O. E., & Pompelli, M. F. (2019). GerminaR: An R
 
 ## GerminaQuant app {-}
 
-Lozano-Isla, F., Benites Alfaro, O., & Pompelli, M. F. (2016). GerminaQuant for R (Patent No. BR 51 2016 001327-3). <https://flavjack.shinyapps.io/germinaquant/>
+Lozano-Isla, Flavio; Benites-Alfaro, Omar Eduardo; Pompelli, Marcelo Francisco (2016). GerminaQuant for R (Patent No. BR 51 2016 001327-3). <https://flavjack.shinyapps.io/germinaquant/>
 
 # Seed germination process
 
@@ -167,7 +167,7 @@ knitr::include_graphics('files/dtorg.png')
 The evaluation of the germination process is obtained of the count of the germination in each experimental unit and It can be evaluated in time lapse of hours, days or months in continuous interval of the same length always beginning with the time zero (ei. Ti00), until the end of the germination process or according to the researcher criteria.
 
 
-```{r chunk_name, child = 'cnfg/code.Rmd'}
+```{r chunk_name, child = 'code.Rmd'}
 ``` 
 
 
