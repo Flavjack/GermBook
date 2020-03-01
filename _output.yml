@@ -21,7 +21,7 @@ bookdown::gitbook:
 #      text: "Edit"
     download: 
 #      - ["rticles.docx", "word"]
-      - ["files.zip", "files"]
+#      - ["files.zip", "files"]
     sharing:
       github: yes
       twitter: no

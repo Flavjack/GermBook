@@ -1,4 +1,4 @@
-book_filename: "GerminaQuant-usm"
+book_filename: "GerminaQuant"
 output_dir: docs
 rmd_files: ["index.Rmd"]
 
