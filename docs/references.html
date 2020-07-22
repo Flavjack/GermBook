@@ -6,14 +6,14 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>References | GerminaR and GerminaQuant .: user manual</title>
   <meta name="description" content="GerminaR R package + GerminaQuant app .: user manual" />
-  <meta name="generator" content="bookdown 0.17 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
 
   <meta property="og:title" content="References | GerminaR and GerminaQuant .: user manual" />
   <meta property="og:type" content="book" />
   <meta property="og:url" content="https://www.lozanoisla.com" />
   <meta property="og:image" content="https://www.lozanoisla.comfiles/cover.jpg" />
   <meta property="og:description" content="GerminaR R package + GerminaQuant app .: user manual" />
-  <meta name="github-repo" content="flavjack/GerminaQuant-usm/issues" />
+  <meta name="github-repo" content="Flavjack/GerminaR" />
 
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="References | GerminaR and GerminaQuant .: user manual" />
@@ -29,7 +29,7 @@
 <meta name="author" content="^{5} Universidade Federal de Pernambuco, Brazil. email: mpompelli@gmail.com" />
 
 
-<meta name="date" content="2020-03-02" />
+<meta name="date" content="2020-07-22" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -55,9 +55,10 @@
 
 
 
+<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
 <script src="libs/htmlwidgets-1.5.1/htmlwidgets.js"></script>
 <link href="libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
-<script src="libs/datatables-binding-0.12/datatables.js"></script>
+<script src="libs/datatables-binding-0.14/datatables.js"></script>
 <link href="libs/dt-core-1.10.20/css/jquery.dataTables.min.css" rel="stylesheet" />
 <link href="libs/dt-core-1.10.20/css/jquery.dataTables.extra.css" rel="stylesheet" />
 <script src="libs/dt-core-1.10.20/js/jquery.dataTables.min.js"></script>
@@ -70,8 +71,8 @@
 <script src="libs/dt-ext-buttons-1.10.20/js/buttons.print.min.js"></script>
 <link href="libs/dt-ext-scroller-1.10.20/css/scroller.dataTables.min.css" rel="stylesheet" />
 <script src="libs/dt-ext-scroller-1.10.20/js/dataTables.scroller.min.js"></script>
-<link href="libs/crosstalk-1.0.0/css/crosstalk.css" rel="stylesheet" />
-<script src="libs/crosstalk-1.0.0/js/crosstalk.min.js"></script>
+<link href="libs/crosstalk-1.1.0.1/css/crosstalk.css" rel="stylesheet" />
+<script src="libs/crosstalk-1.1.0.1/js/crosstalk.min.js"></script>
 
 
 <style type="text/css">
@@ -139,7 +140,7 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
-<link rel="stylesheet" href="cnfg\style.css" type="text/css" />
+<link rel="stylesheet" href="files\style_rbooks.css" type="text/css" />
 </head>
 
 <body>
@@ -182,6 +183,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="5.2" data-path="germinar-data-analysis-with-code.html"><a href="germinar-data-analysis-with-code.html#cumulative-analysis-of-germination"><i class="fa fa-check"></i><b>5.2</b> Cumulative analysis of germination</a><ul>
 <li class="chapter" data-level="5.2.1" data-path="germinar-data-analysis-with-code.html"><a href="germinar-data-analysis-with-code.html#in-time-analysis-for-nacl"><i class="fa fa-check"></i><b>5.2.1</b> In time analysis for NaCl</a></li>
 <li class="chapter" data-level="5.2.2" data-path="germinar-data-analysis-with-code.html"><a href="germinar-data-analysis-with-code.html#in-time-analysis-for-temperature"><i class="fa fa-check"></i><b>5.2.2</b> In time analysis for temperature</a></li>
+<li class="chapter" data-level="5.2.3" data-path="germinar-data-analysis-with-code.html"><a href="germinar-data-analysis-with-code.html#in-time-using-ggplot2"><i class="fa fa-check"></i><b>5.2.3</b> In time using ggplot2</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
@@ -209,13 +211,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h1>References</h1>
 <div id="refs">
 <div id="ref-R-shiny">
-<p>Chang, W., Cheng, J., Allaire, J., Xie, Y., &amp; McPherson, J. (2019). <em>Shiny: Web application framework for r</em>. <a href="https://CRAN.R-project.org/package=shiny">https://CRAN.R-project.org/package=shiny</a></p>
+<p>Chang, W., Cheng, J., Allaire, J., Xie, Y., &amp; McPherson, J. (2020). <em>Shiny: Web application framework for r</em>. <a href="http://shiny.rstudio.com">http://shiny.rstudio.com</a></p>
 </div>
 <div id="ref-Joosen2010">
 <p>Joosen, R. V. L., Kodde, J., Willems, L. A. J., Ligterink, W., Plas, L. H. W. van der, &amp; Hilhorst, H. W. M. (2009). Germinator: A software package for high-throughput scoring and curve fitting of <em>arabidopsis</em> seed germination. <em>The Plant Journal</em>, <em>62</em>(1), 148–159. <a href="https://doi.org/10.1111/j.1365-313x.2009.04116.x">https://doi.org/10.1111/j.1365-313x.2009.04116.x</a></p>
-</div>
-<div id="ref-GerminaR2019">
-<p>Lozano-Isla, Flavio, Benites-Alfaro, Eduardo, O., Pompelli, &amp; Francisco, M. (2019). GerminaR: An R package for germination analysis with the interactive web application “GerminaQuant for R”. <em>Ecological Research</em>, <em>34</em>(2), 339–346. <a href="https://doi.org/10.1111/1440-1703.1275">https://doi.org/10.1111/1440-1703.1275</a></p>
 </div>
 <div id="ref-Marcos-Filho1998">
 <p>Marcos-Filho, J. (1998). New approaches to seed vigor testing. <em>Scientia Agricola</em>, <em>55</em>, 27–33. <a href="https://doi.org/10.1590/S0103-90161998000500005">https://doi.org/10.1590/S0103-90161998000500005</a></p>
@@ -227,7 +226,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Ranal, M. A., &amp; Santana, D. G. de. (2006). How and why to measure the germination process? <em>Revista Brasileira de Botânica</em>, <em>29</em>(1), 1–11. <a href="https://doi.org/10.1590/s0100-84042006000100002">https://doi.org/10.1590/s0100-84042006000100002</a></p>
 </div>
 <div id="ref-R-base">
-<p>R Core Team. (2019). <em>R: A language and environment for statistical computing</em>. R Foundation for Statistical Computing. <a href="https://www.R-project.org/">https://www.R-project.org/</a></p>
+<p>R Core Team. (2020). <em>R: A language and environment for statistical computing</em>. R Foundation for Statistical Computing. <a href="https://www.R-project.org/">https://www.R-project.org/</a></p>
 </div>
 </div>
 
@@ -277,10 +276,10 @@ gitbook.start({
 "text": null
 },
 "view": {
-"link": null,
+"link": "https://github.com/flavjack/germinaquant-usm/blob/master/index.Rmd",
 "text": null
 },
-"download": [["files.zip", "files"]],
+"download": null,
 "toc": {
 "collapse": "section",
 "scroll_highlight": true

@@ -1,7 +1,7 @@
 bookdown::gitbook:
-  css: cnfg/style.css
-  split_by: chapter # chapter none
-  split_bib: FALSE
+  css: files/style_rbooks.css
+  split_by: chapter # options: chapter or none
+  split_bib: TRUE
   config:
     toc:
       collapse: section
@@ -16,12 +16,9 @@ bookdown::gitbook:
       size: 2
     search: yes
     info: no
-#    edit:
-#      link: https://github.com/Flavjack/GerminaQuant-usm/blob/master/%s
-#      text: "Edit"
-    download: 
-#      - ["rticles.docx", "word"]
-     - ["files.zip", "files"]
+    # download: 
+    #   - ["rticles.docx", "word"]
+    #   - ["files.zip", "files"]
     sharing:
       github: yes
       twitter: no

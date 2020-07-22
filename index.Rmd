@@ -9,7 +9,7 @@ author:
   - "$^{5}$ Universidade Federal de Pernambuco, Brazil. email: mpompelli@gmail.com"
 description: "GerminaR R package + GerminaQuant app .: user manual"
 date: '`r Sys.Date()`'
-github-repo: flavjack/GerminaQuant-usm/issues
+github-repo: Flavjack/GerminaR
 cover-image: files/cover.jpg
 url: https\://www.lozanoisla.com
 favicon: files/icons/favicon.png
@@ -17,23 +17,22 @@ site: bookdown::bookdown_site
 documentclass: book
 bookdown::gitbook:
 output: 
-  bookdown::word_document2: 
-    reference_docx: cnfg/style_article.docx
+  # bookdown::word_document2: 
+  #   reference_docx: files/style_article.docx
 always_allow_html: yes
 link-citations: true
 colorlinks: yes
-bibliography: [cnfg/book.bib, cnfg/pkgs.bib]
+bibliography: [files/book.bib, files/pkgs.bib]
 csl: https://www.zotero.org/styles/apa
 ---
 
 ```{r setup, include=FALSE}
-# source("cnfg/debug.r")
-source("cnfg/setup.r")
+source("https://lozanoisla.com/setup.r")
 ```
 
 # Introduction {-}
 
-```{r icon, out.width='35%', fig.align='center'}
+```{r icon, out.width='20%', fig.align='center'}
 include_graphics('files/icon.png')
 ```
 
@@ -163,13 +162,15 @@ knitr::include_graphics('files/gtime.png')
 
 The application allows to plot two type of graphics, the first is the germination percentage in time lapse, and the second the relative germination that calculates the germination according the total number of germinated seeds.
 
-```{r chunk_name, child = 'code.Rmd'}
-``` 
 
-`r if (knitr::is_html_output()){'
-# References {-}
-<div id="refs"></div>'}`
+```{r code, child = 'germinar.Rmd'}
+```
 
-`r if (!knitr::is_html_output()){'
 # References {-}
-<div id="refs"></div>'}`
+
+<div id="refs"></div>
+
+```{r references}
+if(!file.exists("files/pkgs.bib")){write_bib(c(.packages()),'files/pkgs.bib')}
+```
+

@@ -6,14 +6,14 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>3 Germination analysis | GerminaR and GerminaQuant .: user manual</title>
   <meta name="description" content="GerminaR R package + GerminaQuant app .: user manual" />
-  <meta name="generator" content="bookdown 0.17 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
 
   <meta property="og:title" content="3 Germination analysis | GerminaR and GerminaQuant .: user manual" />
   <meta property="og:type" content="book" />
   <meta property="og:url" content="https://www.lozanoisla.com" />
   <meta property="og:image" content="https://www.lozanoisla.comfiles/cover.jpg" />
   <meta property="og:description" content="GerminaR R package + GerminaQuant app .: user manual" />
-  <meta name="github-repo" content="flavjack/GerminaQuant-usm/issues" />
+  <meta name="github-repo" content="Flavjack/GerminaR" />
 
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="3 Germination analysis | GerminaR and GerminaQuant .: user manual" />
@@ -29,7 +29,7 @@
 <meta name="author" content="^{5} Universidade Federal de Pernambuco, Brazil. email: mpompelli@gmail.com" />
 
 
-<meta name="date" content="2020-03-02" />
+<meta name="date" content="2020-07-22" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -55,9 +55,10 @@
 
 
 
+<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
 <script src="libs/htmlwidgets-1.5.1/htmlwidgets.js"></script>
 <link href="libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
-<script src="libs/datatables-binding-0.12/datatables.js"></script>
+<script src="libs/datatables-binding-0.14/datatables.js"></script>
 <link href="libs/dt-core-1.10.20/css/jquery.dataTables.min.css" rel="stylesheet" />
 <link href="libs/dt-core-1.10.20/css/jquery.dataTables.extra.css" rel="stylesheet" />
 <script src="libs/dt-core-1.10.20/js/jquery.dataTables.min.js"></script>
@@ -70,8 +71,8 @@
 <script src="libs/dt-ext-buttons-1.10.20/js/buttons.print.min.js"></script>
 <link href="libs/dt-ext-scroller-1.10.20/css/scroller.dataTables.min.css" rel="stylesheet" />
 <script src="libs/dt-ext-scroller-1.10.20/js/dataTables.scroller.min.js"></script>
-<link href="libs/crosstalk-1.0.0/css/crosstalk.css" rel="stylesheet" />
-<script src="libs/crosstalk-1.0.0/js/crosstalk.min.js"></script>
+<link href="libs/crosstalk-1.1.0.1/css/crosstalk.css" rel="stylesheet" />
+<script src="libs/crosstalk-1.1.0.1/js/crosstalk.min.js"></script>
 
 
 <style type="text/css">
@@ -139,7 +140,7 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
-<link rel="stylesheet" href="cnfg\style.css" type="text/css" />
+<link rel="stylesheet" href="files\style_rbooks.css" type="text/css" />
 </head>
 
 <body>
@@ -182,6 +183,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="5.2" data-path="germinar-data-analysis-with-code.html"><a href="germinar-data-analysis-with-code.html#cumulative-analysis-of-germination"><i class="fa fa-check"></i><b>5.2</b> Cumulative analysis of germination</a><ul>
 <li class="chapter" data-level="5.2.1" data-path="germinar-data-analysis-with-code.html"><a href="germinar-data-analysis-with-code.html#in-time-analysis-for-nacl"><i class="fa fa-check"></i><b>5.2.1</b> In time analysis for NaCl</a></li>
 <li class="chapter" data-level="5.2.2" data-path="germinar-data-analysis-with-code.html"><a href="germinar-data-analysis-with-code.html#in-time-analysis-for-temperature"><i class="fa fa-check"></i><b>5.2.2</b> In time analysis for temperature</a></li>
+<li class="chapter" data-level="5.2.3" data-path="germinar-data-analysis-with-code.html"><a href="germinar-data-analysis-with-code.html#in-time-using-ggplot2"><i class="fa fa-check"></i><b>5.2.3</b> In time using ggplot2</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
@@ -209,91 +211,53 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h1><span class="header-section-number">3</span> Germination analysis</h1>
 <p>After the data collection, the information can be processed using GerminaR by the R console or using the GerminaQuant App. The web application can be used in any device in an interactive way. The application is compound for different tabs (Table <a href="germination-analysis.html#tab:tabs">3.1</a>) that allow to make the analysis very easy.</p>
 <table>
-<caption>
-<span id="tab:tabs">Table 3.1: </span>Name and description of each tab of GerminaQuant to evaluate and analyze the germination process
-</caption>
+<caption><span id="tab:tabs">Table 3.1: </span>Name and description of each tab of GerminaQuant to evaluate and analyze the germination process</caption>
+<colgroup>
+<col width="7%" />
+<col width="92%" />
+</colgroup>
 <thead>
-<tr>
-<th style="text-align:left;">
-Tabs
-</th>
-<th style="text-align:left;">
-Description
-</th>
+<tr class="header">
+<th align="left">Tabs</th>
+<th align="left">Description</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td style="text-align:left;">
-Presentation
-</td>
-<td style="text-align:left;">
-Presentation of the application, principal characteristics and contributors
-</td>
+<tr class="odd">
+<td align="left">Presentation</td>
+<td align="left">Presentation of the application, principal characteristics and contributors</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-User Manual
-</td>
-<td style="text-align:left;">
-User manual explain the meaning of each index and how to collect and process your data
-</td>
+<tr class="even">
+<td align="left">User Manual</td>
+<td align="left">User manual explain the meaning of each index and how to collect and process your data</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-Fieldbook
-</td>
-<td style="text-align:left;">
-Interface to upload the field book and choose the parameter for the germination analysis, GerminaQuant allows to upload the data from google sheet or excel file
-</td>
+<tr class="odd">
+<td align="left">Fieldbook</td>
+<td align="left">Interface to upload the field book and choose the parameter for the germination analysis, GerminaQuant allows to upload the data from google sheet or excel file</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-Germination
-</td>
-<td style="text-align:left;">
-Calculate automatically the germination variables and export the data file.
-</td>
+<tr class="even">
+<td align="left">Germination</td>
+<td align="left">Calculate automatically the germination variables and export the data file.</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-Boxplot
-</td>
-<td style="text-align:left;">
-Interface to explore your data and their distribution
-</td>
+<tr class="odd">
+<td align="left">Boxplot</td>
+<td align="left">Interface to explore your data and their distribution</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-Statistics
-</td>
-<td style="text-align:left;">
-Interface to choose the variables according the experimental design for analysis of variance and summarize the information according the principal mean comparison test
-</td>
+<tr class="even">
+<td align="left">Statistics</td>
+<td align="left">Interface to choose the variables according the experimental design for analysis of variance and summarize the information according the principal mean comparison test</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-Graphics
-</td>
-<td style="text-align:left;">
-Graphic the mean comparison test for the variables selected in the statistical analysis and plot the information in customized bar or line plot.
-</td>
+<tr class="odd">
+<td align="left">Graphics</td>
+<td align="left">Graphic the mean comparison test for the variables selected in the statistical analysis and plot the information in customized bar or line plot.</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-InTime
-</td>
-<td style="text-align:left;">
-Selecting the factor from your experiment, allows plotting the germination process in time.
-</td>
+<tr class="even">
+<td align="left">InTime</td>
+<td align="left">Selecting the factor from your experiment, allows plotting the germination process in time.</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-Tools
-</td>
-<td style="text-align:left;">
-Tool for calculate the osmotic potential for any salt or PEG for germination experiments
-</td>
+<tr class="odd">
+<td align="left">Tools</td>
+<td align="left">Tool for calculate the osmotic potential for any salt or PEG for germination experiments</td>
 </tr>
 </tbody>
 </table>
@@ -343,10 +307,10 @@ gitbook.start({
 "text": null
 },
 "view": {
-"link": null,
+"link": "https://github.com/flavjack/germinaquant-usm/blob/master/index.Rmd",
 "text": null
 },
-"download": [["files.zip", "files"]],
+"download": null,
 "toc": {
 "collapse": "section",
 "scroll_highlight": true
