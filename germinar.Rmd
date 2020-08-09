@@ -9,6 +9,7 @@ Analysis for the germination experiment can follow a routine. The functions will
 
 library(GerminaR)
 library(tidyverse)
+library(knitr)
 
 # load data
 
@@ -18,7 +19,8 @@ fb <- prosopis %>%
 # Prosopis data set
 
 fb %>% 
-   web_table(caption = "Prosopis dataset loaded")
+   head(10) %>% 
+   kable(caption = "Prosopis dataset loaded")
 ```
 
 2. Calculate the germination indices and perform the ANOVA and the mean comparison tests. The user can generate the graphs, expressing their results, which can be either of bars or lines graphics.
@@ -35,7 +37,8 @@ gsm <- ger_summary(SeedN = "seeds"
 # Prosopis data set processed
 
 gsm %>% 
-   web_table(caption = "Function ger_summary performe ten germination indices")
+   head(10) %>% 
+   kable(caption = "Function ger_summary performe ten germination indices")
 
 ```
 
@@ -49,7 +52,7 @@ gsm %>%
 
 # analysis of variance
 
-av <- aov(formula = GRP ~ nacl*temp + rep, data = gsm)
+av <- aov(formula = grp ~ nacl*temp + rep, data = gsm)
 
 # mean comparison test
 
@@ -60,26 +63,27 @@ mc_grp <- ger_testcomp(aov = av
 
 # data result
 
-mc_grp %>% 
-   web_table(caption = "Germination percentage mean comparision")
+mc_grp$table %>% 
+   kable(caption = "Germination percentage mean comparision")
 
 # bar graphics for germination percentage
 
-grp <- fplot(data = mc_grp
-             , type = "bar"
-             , x = "temp"
-             , y = "mean"
-             , z = "nacl"
-             , lmt = c(0,120)
-             , brk = 10
-             , ylab = "Germination ('%')"
-             , xlab = "Temperature (ºC)"
-             , lgl = "NaCl (MPa)"
-             , lgd = "top"
-             , erb = T
-             , color = F
-             , font = 1.8
-             )
+grp <- mc_grp$table %>% 
+   fplot(data = .
+       , type = "bar"
+       , x = "temp"
+       , y = "grp"
+       , groups = "nacl"
+       , limits = c(0,150)
+       , brakes = 30
+       , ylab = "Germination ('%')"
+       , xlab = "Temperature (ºC)"
+       , glab = "NaCl (MPa)"
+       , legend = "top"
+       , error = "ste"
+       , sig = "sig"
+       , color = F
+       )
 
 grp
 
@@ -93,7 +97,7 @@ grp
 
 # analysis of variance
 
-av <- aov(formula = MGT ~ nacl*temp + rep, data = gsm)
+av <- aov(formula = mgt ~ nacl*temp + rep, data = gsm)
 
 # mean comparison test
 
@@ -103,27 +107,27 @@ mc_mgt <- ger_testcomp(aov = av
 
 # data result
 
-mc_mgt %>% 
-   web_table(caption = "Mean germination time comparison")
+mc_mgt$table %>% 
+   kable(caption = "Mean germination time comparison")
 
 # bar graphics for mean germination time
 
-mgt <- fplot(data = mc_mgt
-             , type = "bar" 
-             , x = "temp"
-             , y = "mean"
-             , z = "nacl"
-             , lmt = c(0,9)
-             , brk = 1
-             , ylab = "Mean germination time (days)"
-             , xlab = "Temperature (ºC)"
-             , lgl = "NaCl (MPa)"
-             , lgd = "top"
-             , sig = "sg"
-             , erb = T
-             , color = F
-             , font = 1.2
-             )
+mgt <- mc_mgt$table %>% 
+   fplot(data = .
+       , type = "bar" 
+       , x = "temp"
+       , y = "mgt"
+       , groups = "nacl"
+       , limits = c(0,9)
+       , brakes = 1
+       , ylab = "Mean germination time (days)"
+       , xlab = "Temperature (ºC)"
+       , glab = "NaCl (MPa)"
+       , legend = "top"
+       , sig = "sig"
+       , error = "ste"
+       , color = T
+       )
 
 mgt
 ```
@@ -147,22 +151,29 @@ git <- ger_intime(Factor = "nacl"
                   , data = fb
                   )
 
+# data result
+
+git %>% 
+   head(10) %>% 
+   kable(caption = "Cumulative germination by nacl factor")
+
 # graphic germination in time by NaCl
 
-nacl <- fplot(data = git
-              , type = "line"
-              , x = "evaluation"
-              , y = "mean"
-              , z = "nacl"
-              , lmt = c(0, 110)
-              , brk = 10
-              , ylab = "Germination ('%')"
-              , xlab = "Day"
-              , lgl = "NaCl (MPa)"
-              , lgd = "top"
-              , color = F
-              , erb = T
-              )
+nacl <- git %>% 
+   fplot(data = .
+        , type = "line"
+        , x = "evaluation"
+        , y = "mean"
+        , groups = "nacl"
+        , limits = c(0, 110)
+        , brakes = 10
+        , ylab = "Germination ('%')"
+        , xlab = "Day"
+        , glab = "NaCl (MPa)"
+        , legend = "top"
+        , color = T
+        , error = "ste"
+        )
 nacl
 
 ```
@@ -179,30 +190,35 @@ git <- ger_intime(Factor = "temp"
                   , method = "percentage"
                   , data = fb) 
 
+# data result
+
+git %>% 
+   head(10) %>% 
+   kable(caption = "Cumulative germination by temperature factor")
+
 # graphic germination in time by temperature
 
-temp <- fplot(data = git
-              , type = "line"
-              , x = "evaluation"
-              , y = "mean"
-              , z = "temp"
-              , lmt = c(0, 110)
-              , brk = 10
-              , ylab = "Germination ('%')"
-              , xlab = "Day"
-              , lgl = "Temperature ('°C')"
-              , lgd = "top"
-              , color = F
-              , font = 1.2
-              ) 
+temp <- git %>% 
+   fplot(data = .
+        , type = "line"
+        , x = "evaluation"
+        , y = "mean"
+        , groups = "temp"
+        , limits = c(0, 110)
+        , brakes = 10
+        , ylab = "Germination ('%')"
+        , xlab = "Day"
+        , glab = "Temperature ('°C')"
+        , legend = "top"
+        , color = F
+        ) 
 temp
 
 ```
 
-
 ### In time using ggplot2
 
-GerminaR transform the x axis in discrete values. If you need manipulate the x labels you can work directly with [ggplot2](https://ggplot2.tidyverse.org/). I will implement in the next versions of GerminaR the possibility to manipulate the x axis with `fplot()` function. Also, you can see [Bar and line graphs (ggplot2)](http://www.cookbook-r.com/Graphs/Bar_and_line_graphs_(ggplot2)/)
+As the function `fplot()` is build using [ggplot2](https://ggplot2.tidyverse.org/) [@R-ggplot2]. You can add more arguments for modify the graphics using `+`.
 
 ```{r, echo=TRUE}
 
@@ -214,20 +230,22 @@ git <- ger_intime(Factor = "temp"
                   ) 
 
 ggplot <- git %>% 
-   ggplot(aes(x = evaluation
-              , y =  mean
-              , group = temp
-              , shape = temp
-              )) +
-   geom_line() +
-   geom_point() +
-   scale_x_continuous(name = "Days"
-                      , minor_breaks = 2
+   fplot(data = .
+        , type = "line"
+        , x = "evaluation"
+        , y = "mean"
+        , groups = "temp"
+        , limits = c(0, 110)
+        , brakes = 10
+        , ylab = "Germination ('%')"
+        , xlab = "Day"
+        , glab = "Temperature ('°C')"
+        , legend = "top"
+        , color = F
+        ) +
+   scale_x_continuous(n.breaks = 10
                       , limits = c(0, 11)
-                      ) +
-   scale_y_continuous(name = "Germination") +
-   scale_shape_discrete("Temperature") +
-   theme_bw()
+                      ) 
 
 ggplot
 

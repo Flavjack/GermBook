@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>4 GerminaQuant data processing | GerminaR and GerminaQuant .: user manual</title>
+  <title>2 Germination fieldbook | GerminaR and GerminaQuant .: user manual</title>
   <meta name="description" content="GerminaR R package + GerminaQuant app .: user manual" />
   <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="4 GerminaQuant data processing | GerminaR and GerminaQuant .: user manual" />
+  <meta property="og:title" content="2 Germination fieldbook | GerminaR and GerminaQuant .: user manual" />
   <meta property="og:type" content="book" />
   <meta property="og:url" content="https://www.lozanoisla.com" />
   <meta property="og:image" content="https://www.lozanoisla.comfiles/cover.jpg" />
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="Flavjack/GerminaR" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="4 GerminaQuant data processing | GerminaR and GerminaQuant .: user manual" />
+  <meta name="twitter:title" content="2 Germination fieldbook | GerminaR and GerminaQuant .: user manual" />
   
   <meta name="twitter:description" content="GerminaR R package + GerminaQuant app .: user manual" />
   <meta name="twitter:image" content="https://www.lozanoisla.comfiles/cover.jpg" />
@@ -36,8 +36,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   <link rel="shortcut icon" href="files/icons/favicon.png" type="image/x-icon" />
-<link rel="prev" href="germination-analysis.html"/>
-<link rel="next" href="germinar-data-analysis-with-code.html"/>
+<link rel="prev" href="seed-germination-process.html"/>
+<link rel="next" href="germination-analysis.html"/>
 <script src="libs/header-attrs-2.3/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -194,59 +194,27 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="germinaquant-data-processing" class="section level1" number="4">
-<h1><span class="header-section-number">4</span> GerminaQuant data processing</h1>
-<div id="fieldbook" class="section level2" number="4.1">
-<h2><span class="header-section-number">4.1</span> Fieldbook</h2>
-<p>When you have your fieldbook, you can access to the app <a href="https://flavjack.shinyapps.io/germinaquant/">GerminaQuant for R</a> and go “Fieldbook” tab. Figure <a href="germinaquant-data-processing.html#fig:impdt">4.1</a>.</p>
-<div class="figure" style="text-align: center"><span id="fig:impdt"></span>
-<img src="files/impdt.png" alt="Fieldbook interface for import your data" width="100%" />
-<p class="caption">
-Figure 4.1: Fieldbook interface for import your data
-</p>
+<div id="germination-fieldbook" class="section level1" number="2">
+<h1><span class="header-section-number">2</span> Germination fieldbook</h1>
+<p>For a correct analysis and fast data processing is important to take into account the data organization and the proper record of the germination process. In this section we will explain how you should collect and organize your data.</p>
+<div id="prepare-you-fieldbook" class="section level2" number="2.1">
+<h2><span class="header-section-number">2.1</span> Prepare you fieldbook</h2>
+<p>For using GerminaR and GerminaQuant is necessary that you have a dataset with germination values. You can use a following data as an example <a href="https://docs.google.com/spreadsheets/d/1QziIXGOwb8cl3GaARJq6Ez6aU7vND_UHKJnFcAKx0VI/edit#gid=667855537"><em>“prosopis”</em></a>.</p>
+<p>If you have a Google account you can made a copy of the document and edit it online or download in Excel format for your own analysis.</p>
 </div>
-<p>You can paste a Google spread sheet URL or upload a local file in xlsx format. In “Seeds (col name)” you have to write the name of the column containing the information of the number of seed sown in each experimental unit, for “Evaluations (prefix)” you have to put the prefix of the names for the evaluated days from the germination time lapse.</p>
-</div>
-<div id="germination" class="section level2" number="4.2">
-<h2><span class="header-section-number">4.2</span> Germination</h2>
-<p>If the parameter in the “Fieldbook” tab are correct, in “Germination” tab will be performed and the values of the germination indices will be shown maintaining the experimental design. GerminaQuant allows to copy or downloading the information in “csv” or “xlsx” format. Figure <a href="germinaquant-data-processing.html#fig:dwl">4.2</a></p>
-<div class="figure" style="text-align: center"><span id="fig:dwl"></span>
-<img src="files/dtdown.png" alt="Dowload option for the calculated variables" width="100%" />
+<div id="data-organization" class="section level2" number="2.2">
+<h2><span class="header-section-number">2.2</span> Data organization</h2>
+<p>The field book should have three essential parts.(1) The factor columns (red), according to the experimental design;(2) the seed number column, indicate the number of seeds sown in each experimental unit (green) and (3) the evaluation columns with the germination values (blue) (Figure <a href="germination-fieldbook.html#fig:dtorg">2.1</a>). You can design your own field book with different names in the column according your experimental design.</p>
+<div class="figure" style="text-align: center"><span id="fig:dtorg"></span>
+<img src="files/dtorg.png" alt="Layout for germination evaluation process. The factor column (red) are according the experimental design. The seed number column (green) for the number of seed sown and the evaluation columns (blue) for accounting the germination." width="100%" />
 <p class="caption">
-Figure 4.2: Dowload option for the calculated variables
+Figure 2.1: Layout for germination evaluation process. The factor column (red) are according the experimental design. The seed number column (green) for the number of seed sown and the evaluation columns (blue) for accounting the germination.
 </p>
 </div>
 </div>
-<div id="statistical" class="section level2" number="4.3">
-<h2><span class="header-section-number">4.3</span> Statistical</h2>
-<p>The GerminaQuant application can perform analysis for experimental design in a Complete Randomize Design (CRD), Randomize Complete Block Design (RCBD), Latin Square Design (LSD) or factorial designs, allowing calculate the analysis of variance (AOV) and the mean differences through Student Newman Keuls (SNK), Tukey or Duncan test.</p>
-<div class="figure" style="text-align: center"><span id="fig:stat"></span>
-<img src="files/stat.png" alt="Statitical analysis with ANOVA and mean comparison test" width="100%" />
-<p class="caption">
-Figure 4.3: Statitical analysis with ANOVA and mean comparison test
-</p>
-</div>
-</div>
-<div id="graphics" class="section level2" number="4.4">
-<h2><span class="header-section-number">4.4</span> Graphics</h2>
-<p>Automatically after performed the statistical analysis the application will generate the graphs for the variable chosen with the mean comparison test. The app interface allows customized the graphics in a bar or line plot and export in “tiff” format for publication quality.</p>
-<div class="figure" style="text-align: center"><span id="fig:plot"></span>
-<img src="files/plot.png" alt="Customized interface for bar or line plot" width="100%" />
-<p class="caption">
-Figure 4.4: Customized interface for bar or line plot
-</p>
-</div>
-</div>
-<div id="intime" class="section level2" number="4.5">
-<h2><span class="header-section-number">4.5</span> InTime</h2>
-<p>This Tab allows to visualize the germination process according one of the experimental factors. The app interface allows customized the graphic. Figure <a href="germinaquant-data-processing.html#fig:gtime">4.5</a></p>
-<div class="figure" style="text-align: center"><span id="fig:gtime"></span>
-<img src="files/gtime.png" alt="Germination in time plot" width="100%" />
-<p class="caption">
-Figure 4.5: Germination in time plot
-</p>
-</div>
-<p>The application allows to plot two type of graphics, the first is the germination percentage in time lapse, and the second the relative germination that calculates the germination according the total number of germinated seeds.</p>
+<div id="data-collection" class="section level2" number="2.3">
+<h2><span class="header-section-number">2.3</span> Data collection</h2>
+<p>The evaluation of the germination process is obtained of the count of the germination in each experimental unit and It can be evaluated in any time lapse (hours, days, months, etc) in continuous interval of the same length always beginning with the time zero (ei. Ti00), until the end of the germination process or according to the researcher criteria.</p>
 </div>
 </div>
             </section>
@@ -254,8 +222,8 @@ Figure 4.5: Germination in time plot
           </div>
         </div>
       </div>
-<a href="germination-analysis.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="germinar-data-analysis-with-code.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="seed-germination-process.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="germination-analysis.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
